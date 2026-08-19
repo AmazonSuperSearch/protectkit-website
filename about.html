@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Learn why ProtectKit exists, the mission behind the Windows security application, and the principles that guide its approach to security, investigation, privacy, maintenance, and user control.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1687e8">
+    <link rel="canonical" href="https://getprotectkit.com/about.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ProtectKit">
+    <meta property="og:title" content="About ProtectKit">
+    <meta property="og:description" content="ProtectKit exists to make Windows security easier to understand, easier to manage, and more useful for everyday people.">
+    <meta property="og:url" content="https://getprotectkit.com/about.html">
+
+    <title>About ProtectKit | Our Mission</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f5f8fc;
+        }
+
+        header {
+            background: #0f2747;
+            color: white;
+            padding: 28px 20px;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .tagline {
+            margin: 4px 0 0;
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 20px 50px;
+        }
+
+        .policy {
+            background: white;
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #102a4c;
+            font-size: 34px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            color: #163b67;
+            font-size: 21px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        .effective-date {
+            color: #64748b;
+            margin-bottom: 26px;
+        }
+
+        .notice {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 14px 18px;
+            margin: 22px 0;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 0 20px 30px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .policy {
+                padding: 24px 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+
+    <style>
+        .about-hero {
+            padding: 92px 0 72px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            max-width: 900px;
+            margin: 16px auto 22px;
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            line-height: 1.02;
+            letter-spacing: -0.045em;
+        }
+
+        .about-hero .hero-description {
+            margin: 0 auto;
+        }
+
+        .mission-box {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 42px;
+            border: 2px solid var(--primary);
+            border-radius: 26px;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .mission-box h2 {
+            margin: 8px 0 22px;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .mission-box p {
+            color: var(--text-soft);
+            font-size: 1.08rem;
+        }
+
+        .mission-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .principle {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+            background: white;
+        }
+
+        .principle-number {
+            width: 46px;
+            height: 46px;
+            margin-bottom: 17px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-weight: 900;
+        }
+
+        .principle h3 {
+            margin: 0 0 9px;
+        }
+
+        .principle p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 38px;
+            align-items: start;
+        }
+
+        .story-copy h2 {
+            margin-top: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .story-copy p {
+            color: var(--text-soft);
+        }
+
+        .story-panel {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: var(--surface-soft);
+        }
+
+        .story-panel h3 {
+            margin-top: 0;
+        }
+
+        .story-panel ul {
+            margin-bottom: 0;
+            padding-left: 22px;
+            color: var(--text-soft);
+        }
+
+        .story-panel li {
+            margin: 10px 0;
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .difference-card {
+            padding: 27px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+            background: white;
+        }
+
+        .difference-card strong {
+            display: block;
+            margin-bottom: 9px;
+            font-size: 1.08rem;
+        }
+
+        .difference-card p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .statement {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .statement blockquote {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: clamp(1.55rem, 3vw, 2.25rem);
+            line-height: 1.4;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .statement p {
+            margin: 24px auto 0;
+            max-width: 760px;
+            color: var(--text-soft);
+        }
+
+        .cta-box {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 42px;
+            border-radius: 26px;
+            background: var(--surface-soft);
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 900px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .difference-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .principles {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-box,
+            .cta-box {
+                padding: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="brand" href="index.html" aria-label="ProtectKit home">
+                <span class="brand-mark">P</span>
+                <span>ProtectKit</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="premium.html">Free vs Premium</a>
+                <a href="help.html">Help</a>
+                <a href="about.html">About</a>
+                <a href="support.html">Support</a>
+            </nav>
+
+            <a class="button button-primary"
+               href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+               target="_blank"
+               rel="noopener noreferrer">
+                Download ProtectKit
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <div class="section-label">About ProtectKit</div>
+
+                <h1>
+                    Windows security should help you
+                    <span style="color:var(--primary);">understand what is happening.</span>
+                </h1>
+
+                <p class="hero-description">
+                    ProtectKit was created around a simple idea: security tools are more useful
+                    when people can understand what they find, see the evidence behind a finding,
+                    and know what they can do next.
+                </p>
+
+                <div class="hero-actions" style="justify-content:center;">
+                    <a class="button button-primary" href="features.html">
+                        Explore ProtectKit
+                    </a>
+                    <a class="button button-secondary" href="#mission">
+                        Our Mission
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="mission">
+            <div class="container">
+                <div class="mission-box">
+                    <div class="section-label">Our Mission</div>
+
+                    <h2>Make Windows security easier to understand, manage, and use.</h2>
+
+                    <p>
+                        ProtectKit's mission is to make Windows security easier to understand,
+                        easier to manage, and more useful for everyday people.
+                    </p>
+
+                    <p>
+                        We believe security software should do more than display warnings or
+                        technical data. It should help people understand what is happening on
+                        their computer, why it matters, what evidence supports a finding, and
+                        what they can do next.
+                    </p>
+
+                    <p>
+                        ProtectKit brings Windows security, monitoring, investigation, privacy,
+                        system protection, maintenance, and recovery tools together in one place.
+                        Our goal is to complement the protections already built into Windows
+                        while giving users greater visibility, clearer explanations, and more
+                        confidence when making security decisions.
+                    </p>
+
+                    <p>
+                        We are committed to practical protection without unnecessary fear,
+                        evidence before assumptions, clear guidance instead of vague alerts,
+                        and useful tools that respect the user's control over their own computer.
+                    </p>
+
+                    <p>
+                        ProtectKit exists to help people see more, understand more, and make
+                        better decisions about the security and health of their Windows PC.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Why ProtectKit Exists</div>
+                    <h2>Security information is only useful if people can act on it</h2>
+                    <p>
+                        Windows already contains powerful security technologies. The challenge
+                        for many users is understanding their status, interpreting technical
+                        information, investigating unusual activity, and deciding what action
+                        is appropriate.
+                    </p>
+                </div>
+
+                <div class="story-grid">
+                    <div class="story-copy">
+                        <h2>More visibility. Better explanations. Better decisions.</h2>
+
+                        <p>
+                            ProtectKit was built to bring important Windows security and system
+                            information into a clearer, more approachable experience.
+                        </p>
+
+                        <p>
+                            Instead of treating every unfamiliar process, connection, service,
+                            startup entry, or system change as a threat, ProtectKit is designed
+                            to help users investigate the evidence surrounding it.
+                        </p>
+
+                        <p>
+                            That distinction matters. An unfamiliar item is not automatically
+                            malicious. A suspicious signal is not automatically proof of an
+                            attack. Good security requires context.
+                        </p>
+
+                        <p>
+                            ProtectKit's role is to help surface that context and give users
+                            practical tools for deciding what deserves attention.
+                        </p>
+                    </div>
+
+                    <aside class="story-panel">
+                        <h3>ProtectKit is designed to help answer questions like:</h3>
+                        <ul>
+                            <li>Are my important Windows security protections enabled?</li>
+                            <li>What programs are communicating over my network?</li>
+                            <li>What starts automatically when Windows starts?</li>
+                            <li>What are the services running on my computer?</li>
+                            <li>Have important security settings changed?</li>
+                            <li>Does a finding have evidence that makes it genuinely suspicious?</li>
+                            <li>What should I investigate before blocking, disabling, or removing something?</li>
+                            <li>What Windows maintenance or recovery options are available?</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Our Principles</div>
+                    <h2>The ideas that guide ProtectKit</h2>
+                </div>
+
+                <div class="principles">
+                    <article class="principle">
+                        <div class="principle-number">1</div>
+                        <h3>Evidence before assumptions</h3>
+                        <p>
+                            Something unusual is not automatically malicious. ProtectKit aims
+                            to provide context and evidence so users can make more informed decisions.
+                        </p>
+                    </article>
+
+                    <article class="principle">
+                        <div class="principle-number">2</div>
+                        <h3>Explain what matters</h3>
+                        <p>
+                            Technical information should be translated into useful explanations:
+                            what was found, why it matters, how confident the finding is, and what
+                            the user can consider doing next.
+                        </p>
+                    </article>
+
+                    <article class="principle">
+                        <div class="principle-number">3</div>
+                        <h3>Complement Windows security</h3>
+                        <p>
+                            ProtectKit is not designed to replace Microsoft Defender or Windows
+                            security technologies. It is designed to make important protections
+                            easier to inspect, configure, investigate, and understand.
+                        </p>
+                    </article>
+
+                    <article class="principle">
+                        <div class="principle-number">4</div>
+                        <h3>Keep the user in control</h3>
+                        <p>
+                            Security tools can make consequential changes. ProtectKit aims to
+                            explain actions clearly so users understand what they are choosing
+                            before changing important Windows settings.
+                        </p>
+                    </article>
+
+                    <article class="principle">
+                        <div class="principle-number">5</div>
+                        <h3>Avoid unnecessary fear</h3>
+                        <p>
+                            Fear is not a substitute for security. ProtectKit should not exaggerate
+                            uncertain findings merely to make the product appear more effective.
+                        </p>
+                    </article>
+
+                    <article class="principle">
+                        <div class="principle-number">6</div>
+                        <h3>Make useful protection accessible</h3>
+                        <p>
+                            ProtectKit Free is intended to provide genuinely useful capabilities.
+                            Premium expands the experience with continuous monitoring and advanced
+                            functionality rather than making the Free edition meaningless.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">What Makes ProtectKit Different</div>
+                    <h2>Not another unexplained warning screen</h2>
+                </div>
+
+                <div class="difference-grid">
+                    <article class="difference-card">
+                        <strong>Security + investigation</strong>
+                        <p>
+                            ProtectKit combines protection status with tools for investigating
+                            connections, startup programs, services, system changes, files,
+                            and other security-relevant activity.
+                        </p>
+                    </article>
+
+                    <article class="difference-card">
+                        <strong>Security + maintenance</strong>
+                        <p>
+                            Security and system health often overlap. ProtectKit also provides
+                            guided maintenance, repair, optimization, restore, and recovery workflows.
+                        </p>
+                    </article>
+
+                    <article class="difference-card">
+                        <strong>Technical evidence + plain English</strong>
+                        <p>
+                            The goal is not to hide technical information. It is to present the
+                            evidence while making its significance understandable to people who
+                            are not security professionals.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="statement">
+                    <div class="section-label">The ProtectKit Standard</div>
+
+                    <blockquote>
+                        “Show people what was found. Explain why it matters.
+                        Show the evidence. Help them decide what to do next.”
+                    </blockquote>
+
+                    <p>
+                        That principle guides the direction of ProtectKit as new monitoring,
+                        investigation, protection, and recovery capabilities are developed.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">A Clear Role</div>
+                    <h2>ProtectKit complements the security already built into Windows</h2>
+                    <p>
+                        ProtectKit is not marketed as a replacement for Microsoft Defender and
+                        does not promise that a computer is free from every threat.
+                    </p>
+                </div>
+
+                <div class="difference-grid">
+                    <article class="difference-card">
+                        <strong>Verify</strong>
+                        <p>
+                            Inspect important Windows security protections and configurations
+                            so users can see where attention may be needed.
+                        </p>
+                    </article>
+
+                    <article class="difference-card">
+                        <strong>Investigate</strong>
+                        <p>
+                            Give users tools to examine suspicious or unfamiliar activity
+                            instead of forcing them to make decisions from a single warning.
+                        </p>
+                    </article>
+
+                    <article class="difference-card">
+                        <strong>Guide</strong>
+                        <p>
+                            Explain findings and provide practical next steps while preserving
+                            the user's ability to make the final decision.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="section-label">Explore ProtectKit</div>
+                    <h2>See what ProtectKit can help you understand about your Windows PC.</h2>
+                    <p class="hero-description" style="margin-left:auto;margin-right:auto;">
+                        Start with ProtectKit Free and explore its security, investigation,
+                        privacy, maintenance, and system-protection tools.
+                    </p>
+
+                    <div class="hero-actions" style="justify-content:center;">
+                        <a class="button button-primary"
+                           href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Download ProtectKit
+                        </a>
+
+                        <a class="button button-secondary" href="features.html">
+                            View Features
+                        </a>
+
+                        <a class="button button-secondary" href="premium.html">
+                            Free vs Premium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark">P</span>
+                    <span>ProtectKit</span>
+                </div>
+
+                <div class="footer-copy">
+                    © 2026 ProtectKit. All rights reserved.
+                    <br>
+                    <a href="https://getprotectkit.com/" style="font-weight:700;">
+                        getprotectkit.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="help.html">Help</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
