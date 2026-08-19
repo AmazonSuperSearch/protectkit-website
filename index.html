@@ -9,7 +9,7 @@
 
     <meta
         name="description"
-        content="ProtectKit is an explainable Windows 11 security application that helps you monitor protections, investigate suspicious activity, strengthen Windows, and understand what to do next.">
+        content="ProtectKit is an explainable Windows 11 security application that helps you understand your security, investigate suspicious activity, strengthen Windows protections, monitor important changes, and know what to do next.">
 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1687e8">
@@ -18,15 +18,15 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ProtectKit">
-    <meta property="og:title" content="ProtectKit | Explainable Windows Security">
-    <meta property="og:description" content="Understand your Windows security, investigate suspicious activity, strengthen important protections, and know what to do next.">
+    <meta property="og:title" content="ProtectKit | Windows Security That Explains Itself">
+    <meta property="og:description" content="See what needs attention, understand why it matters, review the evidence, and know what to do next.">
     <meta property="og:url" content="https://getprotectkit.com/">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="ProtectKit | Explainable Windows Security">
-    <meta name="twitter:description" content="Understand your Windows security, investigate suspicious activity, strengthen important protections, and know what to do next.">
+    <meta name="twitter:title" content="ProtectKit | Windows Security That Explains Itself">
+    <meta name="twitter:description" content="Understand your Windows security, investigate suspicious activity, and know what to do next.">
 
-    <title>ProtectKit | Explainable Windows Security</title>
+    <title>ProtectKit | Windows Security That Explains Itself</title>
 
     <script type="application/ld+json">
     {
@@ -36,7 +36,7 @@
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Windows 11",
         "url": "https://getprotectkit.com/",
-        "description": "ProtectKit is an explainable Windows security application for assessment, investigation, monitoring, hardening, maintenance, and security guidance.",
+        "description": "ProtectKit is an explainable Windows security application for assessment, investigation, monitoring, hardening, maintenance, recovery, and security guidance.",
         "offers": [
             {
                 "@type": "Offer",
@@ -46,12 +46,12 @@
             },
             {
                 "@type": "Offer",
-                "name": "ProtectKit Premium",
-                "price": "2.99",
+                "name": "ProtectKit Premium Monthly",
+                "price": "3.99",
                 "priceCurrency": "USD",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
-                    "price": "2.99",
+                    "price": "3.99",
                     "priceCurrency": "USD",
                     "unitText": "MONTH"
                 }
@@ -764,25 +764,213 @@
             }
         }
     </style>
+
+    <style>
+        .nav-links {
+            gap: 20px;
+        }
+
+        .nav-more {
+            position: relative;
+        }
+
+        .mission-section {
+            padding: 92px 0;
+            background:
+                linear-gradient(
+                    145deg,
+                    #edf6ff,
+                    #ffffff
+                );
+        }
+
+        .mission-box {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 46px;
+            border: 1px solid #bddfff;
+            border-radius: 28px;
+            background: white;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .mission-box h2 {
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mission-box p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-soft);
+            font-size: 1.08rem;
+        }
+
+        .mission-box p + p {
+            margin-top: 16px;
+        }
+
+        .principle-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 34px;
+        }
+
+        .principle-mini {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--surface-soft);
+            font-size: 0.92rem;
+            font-weight: 800;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card .feature-link {
+            margin-top: auto;
+            padding-top: 18px;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .page-card {
+            display: flex;
+            flex-direction: column;
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+            background: white;
+            box-shadow: 0 10px 30px rgba(19, 61, 96, 0.05);
+        }
+
+        .page-card h3 {
+            margin: 0 0 9px;
+        }
+
+        .page-card p {
+            margin: 0 0 20px;
+            color: var(--text-soft);
+        }
+
+        .page-card a {
+            margin-top: auto;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .pricing-grid {
+            grid-template-columns: repeat(2, minmax(0, 430px));
+        }
+
+        .pricing-note {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--text-soft);
+        }
+
+        .confidence-panel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 34px;
+        }
+
+        .confidence-card {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: white;
+        }
+
+        .confidence-card strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .confidence-card p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1.2fr repeat(3, 1fr);
+            gap: 34px;
+            width: 100%;
+        }
+
+        .footer-column strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            display: block;
+            margin: 8px 0;
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 980px) {
+            .principle-strip,
+            .page-grid,
+            .confidence-panel {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-columns {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .principle-strip,
+            .page-grid,
+            .confidence-panel,
+            .footer-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-box {
+                padding: 30px 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container navigation">
-            <a class="brand" href="#top" aria-label="ProtectKit home">
+            <a class="brand" href="index.html" aria-label="ProtectKit home">
                 <span class="brand-mark">P</span>
                 <span>ProtectKit</span>
             </a>
 
             <nav class="nav-links" aria-label="Primary navigation">
-                <a href="#features">Features</a>
-                <a href="#why-protectkit">Why ProtectKit</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#download">Download</a>
-                <a href="#support">Support</a>
+                <a href="features.html">Features</a>
+                <a href="premium.html">Free vs Premium</a>
+                <a href="help.html">Help</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
-            <a class="button button-primary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">
+            <a class="button button-primary"
+               href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+               target="_blank"
+               rel="noopener noreferrer">
                 Download ProtectKit
             </a>
         </div>
@@ -803,26 +991,29 @@
                     </h1>
 
                     <p class="hero-description">
-                        ProtectKit brings Windows security, monitoring,
-                        investigation, hardening, and maintenance tools together
-                        in one clear application. See what needs attention,
-                        understand why it matters, review the available evidence,
-                        and know what to do next.
+                        ProtectKit brings Windows security, monitoring, investigation,
+                        hardening, privacy, device security, maintenance, and recovery
+                        tools together in one clear application. See what needs attention,
+                        understand why it matters, review the available evidence, and know
+                        what to do next.
                     </p>
 
                     <div class="hero-actions">
-                        <a class="button button-primary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">
-                            Download ProtectKit
+                        <a class="button button-primary"
+                           href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Download ProtectKit Free
                         </a>
 
-                        <a class="button button-secondary" href="#features">
-                            View features
+                        <a class="button button-secondary" href="features.html">
+                            Explore Features
                         </a>
                     </div>
 
                     <p class="hero-note">
-                        Built for Windows 11. Start free, with optional Premium
-                        features for continuous monitoring and deeper investigation.
+                        ProtectKit Free is genuinely useful. Premium adds continuous
+                        monitoring, real-time alerts, and advanced protection capabilities.
                     </p>
                 </div>
 
@@ -845,46 +1036,28 @@
 
                             <div class="status-grid">
                                 <div class="status-card">
-                                    <div class="status-card-label">
-                                        System files
-                                    </div>
-                                    <div class="status-card-value status-good">
-                                        Protecting
-                                    </div>
+                                    <div class="status-card-label">System files</div>
+                                    <div class="status-card-value status-good">Protecting</div>
                                 </div>
 
                                 <div class="status-card">
-                                    <div class="status-card-label">
-                                        Firewall
-                                    </div>
-                                    <div class="status-card-value status-good">
-                                        Active
-                                    </div>
+                                    <div class="status-card-label">Firewall</div>
+                                    <div class="status-card-value status-good">Active</div>
                                 </div>
 
                                 <div class="status-card">
-                                    <div class="status-card-label">
-                                        Defender
-                                    </div>
-                                    <div class="status-card-value status-good">
-                                        Enabled
-                                    </div>
+                                    <div class="status-card-label">Defender</div>
+                                    <div class="status-card-value status-good">Enabled</div>
                                 </div>
 
                                 <div class="status-card">
-                                    <div class="status-card-label">
-                                        DNS protection
-                                    </div>
-                                    <div class="status-card-value status-good">
-                                        Secured
-                                    </div>
+                                    <div class="status-card-label">DNS protection</div>
+                                    <div class="status-card-value status-good">Secured</div>
                                 </div>
                             </div>
 
                             <div class="activity-card">
-                                <div class="activity-title">
-                                    Recent protection activity
-                                </div>
+                                <div class="activity-title">Recent protection activity</div>
 
                                 <div class="activity-row">
                                     <span class="activity-icon">✓</span>
@@ -921,7 +1094,7 @@
 
                 <div class="trust-item">
                     <span class="trust-check">✓</span>
-                    Persistent activity logs
+                    Useful Free edition
                 </div>
 
                 <div class="trust-item">
@@ -931,19 +1104,58 @@
             </div>
         </div>
 
-        <section class="section section-alt" id="features">
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-box">
+                    <div class="section-label">Our Mission</div>
+
+                    <h2>
+                        Make Windows security easier to understand,
+                        easier to manage, and more useful.
+                    </h2>
+
+                    <p>
+                        ProtectKit exists to help everyday Windows users understand what
+                        is happening on their computer, why it matters, what evidence
+                        supports a finding, and what they can do next.
+                    </p>
+
+                    <p>
+                        Our goal is to complement the protections already built into
+                        Windows while giving users greater visibility, clearer guidance,
+                        and more confidence when making decisions about the security and
+                        health of their PC.
+                    </p>
+
+                    <div class="principle-strip">
+                        <div class="principle-mini">Evidence before assumptions</div>
+                        <div class="principle-mini">Clear guidance, not vague alerts</div>
+                        <div class="principle-mini">Practical protection without fear</div>
+                        <div class="principle-mini">The user stays in control</div>
+                    </div>
+
+                    <div class="hero-actions" style="justify-content:center;">
+                        <a class="button button-secondary" href="about.html">
+                            Read About ProtectKit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
             <div class="container">
                 <div class="section-heading">
-                    <div class="section-label">Protection and investigation</div>
+                    <div class="section-label">Protection and Investigation</div>
 
                     <h2>
                         Important Windows security tools in one place
                     </h2>
 
                     <p>
-                        ProtectKit helps users verify protections, investigate
-                        suspicious activity, reduce attack surface, and respond
-                        with clearer information.
+                        ProtectKit helps you verify protections, investigate suspicious
+                        activity, reduce attack surface, monitor important changes,
+                        maintain Windows, and respond with clearer information.
                     </p>
                 </div>
 
@@ -952,9 +1164,8 @@
                         <div class="feature-icon">S</div>
                         <h3>System Change Monitor</h3>
                         <p>
-                            Verify protected system files, security settings,
-                            and credential protections while monitoring for
-                            important changes.
+                            Verify supported system files, security settings, and
+                            credential protections while monitoring important changes.
                         </p>
                     </article>
 
@@ -962,18 +1173,17 @@
                         <div class="feature-icon">N</div>
                         <h3>Live Connections</h3>
                         <p>
-                            See which processes and services are communicating,
-                            investigate remote addresses, and review trust
-                            evidence.
+                            See which processes are communicating, inspect remote
+                            destinations, and review evidence surrounding network activity.
                         </p>
                     </article>
 
                     <article class="feature-card">
                         <div class="feature-icon">F</div>
-                        <h3>Firewall Management</h3>
+                        <h3>Firewall &amp; Rules</h3>
                         <p>
-                            Review firewall profiles, inspect rules, apply
-                            recommended settings, and control network access.
+                            Review Windows Firewall profiles, inspect rules, apply supported
+                            recommended settings, and investigate network access.
                         </p>
                     </article>
 
@@ -981,8 +1191,8 @@
                         <div class="feature-icon">D</div>
                         <h3>Microsoft Defender</h3>
                         <p>
-                            Review Defender status, update protection, run
-                            trusted Windows scans, and understand scan results.
+                            Review Defender status, update protection, and run supported
+                            Windows security scans from ProtectKit.
                         </p>
                     </article>
 
@@ -990,19 +1200,17 @@
                         <div class="feature-icon">H</div>
                         <h3>Windows Hardening</h3>
                         <p>
-                            Check important Windows security protections and
-                            identify settings that may reduce your attack
-                            surface.
+                            Review important Windows security controls and identify
+                            settings that may unnecessarily increase exposure.
                         </p>
                     </article>
 
                     <article class="feature-card">
                         <div class="feature-icon">I</div>
-                        <h3>Startup and Service Investigation</h3>
+                        <h3>Startup &amp; Services</h3>
                         <p>
-                            Examine startup entries and services using
-                            signatures, publishers, file paths, hashes, and
-                            trust evidence.
+                            Investigate startup entries and Windows services using
+                            publishers, signatures, paths, hashes, status, and other evidence.
                         </p>
                     </article>
 
@@ -1010,34 +1218,38 @@
                         <div class="feature-icon">DNS</div>
                         <h3>DNS Protection</h3>
                         <p>
-                            Review DNS configuration and apply supported secure
-                            DNS profiles across the Windows system.
+                            Review DNS configuration and use supported secure DNS options.
                         </p>
                     </article>
 
                     <article class="feature-card">
-                        <div class="feature-icon">L</div>
-                        <h3>Security Logs</h3>
+                        <div class="feature-icon">USB</div>
+                        <h3>USB &amp; Bluetooth Security</h3>
                         <p>
-                            Preserve important ProtectKit activity in persistent
-                            logs that can be viewed, copied, and exported.
+                            Review supported connected-device information and investigate
+                            devices you do not recognize.
                         </p>
                     </article>
 
                     <article class="feature-card">
                         <div class="feature-icon">R</div>
-                        <h3>Maintenance and Recovery</h3>
+                        <h3>Maintenance &amp; Recovery</h3>
                         <p>
-                            Launch trusted Windows cleanup, repair,
-                            optimization, restore, and recovery tools from one
-                            organized workspace.
+                            Use Windows cleanup, repair, optimization, restore, and
+                            recovery workflows from one organized workspace.
                         </p>
                     </article>
+                </div>
+
+                <div class="hero-actions" style="justify-content:center;">
+                    <a class="button button-primary" href="features.html">
+                        View All ProtectKit Features
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="why-protectkit">
+        <section class="section">
             <div class="container explain-grid">
                 <div>
                     <div class="section-label">Why ProtectKit</div>
@@ -1047,9 +1259,9 @@
                     </h2>
 
                     <p class="hero-description">
-                        Many security tools report that something may be wrong.
-                        ProtectKit is designed to provide the surrounding
-                        context needed to make a better decision.
+                        ProtectKit is designed to show the context behind a security
+                        finding instead of expecting users to make decisions from a
+                        vague warning or technical label.
                     </p>
 
                     <div class="explain-list">
@@ -1058,8 +1270,8 @@
                             <div>
                                 <strong>What was found</strong>
                                 <p>
-                                    See the affected protection, process,
-                                    service, connection, setting, or file.
+                                    See the affected protection, process, service,
+                                    connection, setting, file, or device.
                                 </p>
                             </div>
                         </div>
@@ -1069,8 +1281,8 @@
                             <div>
                                 <strong>Why it matters</strong>
                                 <p>
-                                    Understand the security relevance without
-                                    relying on vague warnings.
+                                    Understand the security relevance without relying
+                                    on unexplained warnings.
                                 </p>
                             </div>
                         </div>
@@ -1080,9 +1292,9 @@
                             <div>
                                 <strong>What evidence supports it</strong>
                                 <p>
-                                    Review signatures, publishers, paths,
-                                    hashes, Windows status, and other available
-                                    evidence.
+                                    Review signatures, publishers, paths, hashes,
+                                    Windows status, network information, and other
+                                    available evidence.
                                 </p>
                             </div>
                         </div>
@@ -1092,9 +1304,8 @@
                             <div>
                                 <strong>What to do next</strong>
                                 <p>
-                                    Receive practical guidance for
-                                    investigation, repair, reversal, or further
-                                    review.
+                                    Get practical guidance for investigation,
+                                    configuration, repair, reversal, or further review.
                                 </p>
                             </div>
                         </div>
@@ -1104,10 +1315,8 @@
                 <div class="evidence-panel">
                     <div class="evidence-header">
                         <div>
-                            <strong>Security assessment</strong>
-                            <div class="price-note">
-                                Example ProtectKit explanation
-                            </div>
+                            <strong>Example ProtectKit assessment</strong>
+                            <div class="price-note">Evidence before assumptions</div>
                         </div>
 
                         <div class="evidence-badge">
@@ -1118,54 +1327,80 @@
                     <div class="evidence-section">
                         <strong>What was found</strong>
                         <p>
-                            A program configured to start with Windows could
-                            not be fully verified.
+                            A program configured to start with Windows could not be
+                            fully verified.
                         </p>
                     </div>
 
                     <div class="evidence-section">
                         <strong>Why it matters</strong>
                         <p>
-                            Startup programs run automatically and may remain
-                            active without the user opening them.
+                            Startup programs can run automatically and remain active
+                            without the user launching them manually.
                         </p>
                     </div>
 
                     <div class="evidence-section">
                         <strong>Available evidence</strong>
                         <p>
-                            ProtectKit can display the executable path,
-                            publisher, signature status, source, hash, and trust
-                            assessment.
+                            ProtectKit can display the executable path, publisher,
+                            signature status, source, hash, and other available trust evidence.
                         </p>
                     </div>
 
                     <div class="evidence-section">
                         <strong>Recommended action</strong>
                         <p>
-                            Review the program, verify that you recognize it,
-                            and investigate further before removing or
-                            disabling it.
+                            Review the program, confirm whether you recognize it,
+                            and investigate further before disabling or removing it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="confidence-panel">
+                    <div class="confidence-card">
+                        <strong>Suspicious is not the same as malicious</strong>
+                        <p>
+                            ProtectKit encourages users to investigate supporting evidence
+                            before reaching a conclusion.
+                        </p>
+                    </div>
+
+                    <div class="confidence-card">
+                        <strong>Unknown means more information is needed</strong>
+                        <p>
+                            ProtectKit should not pretend certainty exists when the evidence
+                            is incomplete.
+                        </p>
+                    </div>
+
+                    <div class="confidence-card">
+                        <strong>Admin Required is a permission state</strong>
+                        <p>
+                            It means Windows requires elevation for the requested operation,
+                            not that ProtectKit found malware.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-alt" id="pricing">
+        <section class="section section-alt">
             <div class="container">
                 <div class="section-heading">
-                    <div class="section-label">ProtectKit editions</div>
+                    <div class="section-label">ProtectKit Editions</div>
 
                     <h2>
-                        Useful protection for free, advanced capability in
-                        Premium
+                        Start free. Upgrade when continuous protection makes sense.
                     </h2>
 
                     <p>
-                        Start with a generous free edition. Upgrade only if you
-                        want continuous monitoring, real-time alerts, and deeper
-                        investigation features.
+                        ProtectKit Free is intended to remain useful on its own.
+                        Premium expands the application with supported continuous
+                        monitoring, real-time alerts, advanced investigation, and
+                        additional protection capabilities.
                     </p>
                 </div>
 
@@ -1174,19 +1409,22 @@
                         <h3>ProtectKit Free</h3>
                         <div class="price">Free</div>
                         <div class="price-note">
-                            Essential assessment and investigation tools
+                            Useful security, investigation, and maintenance tools
                         </div>
 
                         <ul class="pricing-features">
-                            <li>Windows security overview and manual scans</li>
+                            <li>Windows security overview and supported manual scans</li>
                             <li>Microsoft Defender and firewall controls</li>
-                            <li>DNS protection and selected hardening tools</li>
+                            <li>DNS protection and selected hardening features</li>
                             <li>Connection snapshots and investigation</li>
                             <li>Startup, services, privacy, and maintenance tools</li>
                             <li>Basic ProtectKit logs and reports</li>
                         </ul>
 
-                        <a class="button button-secondary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">
+                        <a class="button button-secondary"
+                           href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Download Free
                         </a>
                     </article>
@@ -1195,29 +1433,192 @@
                         <div class="pricing-tag">Advanced protection</div>
 
                         <h3>ProtectKit Premium</h3>
-                        <div class="price">$2.99<span style="font-size: 1rem; font-weight: 750;">/month</span></div>
+                        <div class="price">
+                            $3.99
+                            <span style="font-size:1rem;font-weight:750;">/month</span>
+                        </div>
+
                         <div class="price-note">
-                            Continuous monitoring and deeper investigation
+                            Monthly or yearly billing available
                         </div>
 
                         <ul class="pricing-features">
-                            <li>System Change continuous monitoring</li>
-                            <li>Live Connection continuous monitoring</li>
+                            <li>Continuous System Change Monitoring</li>
+                            <li>Continuous Live Connection Monitoring</li>
                             <li>Real-time security alerts</li>
-                            <li>Advanced investigation tools</li>
+                            <li>Advanced investigation features</li>
                             <li>Advanced Windows hardening</li>
-                            <li>Unlimited scan history and deeper analysis</li>
+                            <li>Expanded history and additional Premium protection</li>
                         </ul>
 
-                        <a class="button button-primary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">
-                            Get ProtectKit
+                        <a class="button button-primary" href="premium.html">
+                            Compare Premium Options
                         </a>
+                    </article>
+                </div>
+
+                <p class="pricing-note">
+                    Monthly and yearly Premium provide the same Premium feature set.
+                    See the Free vs Premium page for the current plan details.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Learn &amp; Get Help</div>
+
+                    <h2>
+                        ProtectKit should be understandable before you need support
+                    </h2>
+
+                    <p>
+                        The website now includes dedicated guides for learning ProtectKit,
+                        understanding findings, investigating suspicious activity,
+                        troubleshooting problems, and finding quick answers.
+                    </p>
+                </div>
+
+                <div class="page-grid">
+                    <article class="page-card">
+                        <h3>Getting Started</h3>
+                        <p>
+                            Installation, first launch, Dashboard basics, and your first
+                            ProtectKit security review.
+                        </p>
+                        <a href="help-getting-started.html">Open Getting Started →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Understanding Findings</h3>
+                        <p>
+                            Learn how ProtectKit uses evidence, uncertainty, suspicious,
+                            unknown, critical, inconclusive, and admin-required states.
+                        </p>
+                        <a href="help-understanding-findings.html">Understand Findings →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Security Investigation Guide</h3>
+                        <p>
+                            Learn how to investigate files, processes, services, startup
+                            items, and network activity using correlated evidence.
+                        </p>
+                        <a href="help-security-investigation.html">Investigation Guide →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Troubleshooting</h3>
+                        <p>
+                            Solve common ProtectKit and Windows-related problems involving
+                            scans, repairs, permissions, network lookups, and Premium access.
+                        </p>
+                        <a href="help-troubleshooting.html">Troubleshoot ProtectKit →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Free vs Premium Help</h3>
+                        <p>
+                            Learn how Premium access works, why some controls are locked,
+                            and what happens when a subscription ends.
+                        </p>
+                        <a href="help-free-vs-premium.html">Premium Help →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Frequently Asked Questions</h3>
+                        <p>
+                            Quick answers about ProtectKit, Windows security, privacy,
+                            Premium, findings, maintenance, and support.
+                        </p>
+                        <a href="faq.html">View FAQ →</a>
+                    </article>
+                </div>
+
+                <div class="hero-actions" style="justify-content:center;">
+                    <a class="button button-primary" href="help.html">
+                        Visit Help Center
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Trust &amp; Transparency</div>
+
+                    <h2>
+                        Learn how ProtectKit approaches security and privacy
+                    </h2>
+
+                    <p>
+                        ProtectKit's website includes dedicated pages for its security
+                        practices, privacy policy, legal terms, support, contact information,
+                        and affiliate program.
+                    </p>
+                </div>
+
+                <div class="page-grid">
+                    <article class="page-card">
+                        <h3>Security Practices</h3>
+                        <p>
+                            Local analysis, online services, permissions, logging,
+                            evidence-based findings, updates, and security limitations.
+                        </p>
+                        <a href="security.html">Security Practices →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Privacy Policy</h3>
+                        <p>
+                            Learn what ProtectKit processes, when external services may be
+                            used, and how Premium, support, and online lookups are handled.
+                        </p>
+                        <a href="privacy.html">Privacy Policy →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Terms of Service</h3>
+                        <p>
+                            Review the ProtectKit software license, subscription terms,
+                            limitations, acceptable use, and legal framework.
+                        </p>
+                        <a href="terms.html">Terms of Service →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Support</h3>
+                        <p>
+                            Get direct help with product questions, bugs, false positives,
+                            Premium access, billing questions, or troubleshooting.
+                        </p>
+                        <a href="support.html">ProtectKit Support →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Contact ProtectKit</h3>
+                        <p>
+                            Send feedback, feature ideas, business inquiries, privacy
+                            questions, or general ProtectKit questions.
+                        </p>
+                        <a href="contact.html">Contact ProtectKit →</a>
+                    </article>
+
+                    <article class="page-card">
+                        <h3>Affiliate Program</h3>
+                        <p>
+                            Learn how approved affiliates can promote ProtectKit and
+                            earn recurring commissions on qualifying Premium referrals.
+                        </p>
+                        <a href="affiliates.html">Affiliate Program →</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="cta" id="download">
+        <section class="cta">
             <div class="container">
                 <div class="cta-box">
                     <h2>
@@ -1225,271 +1626,81 @@
                     </h2>
 
                     <p>
-                        Check your Windows security, investigate what is running
-                        on your computer, strengthen important protections, and
-                        use guided maintenance tools from one place.
+                        Check your Windows security, investigate what is running,
+                        strengthen important protections, and use practical maintenance
+                        tools from one place.
                     </p>
 
-                    <div class="hero-actions" style="justify-content: center; margin-top: 0;">
-                        <a
-                            class="button button-secondary"
-                            href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">
+                    <div class="hero-actions"
+                         style="justify-content:center;margin-top:0;">
+                        <a class="button button-secondary"
+                           href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Download ProtectKit
                         </a>
 
-                        <a
-                            class="button button-secondary"
-                            href="mailto:support@getprotectkit.com?subject=ProtectKit%20Support%20Request">
-                            Contact Support
+                        <a class="button button-secondary" href="help-getting-started.html">
+                            Getting Started
                         </a>
                     </div>
 
-                    <p style="margin-top: 18px; margin-bottom: 0; font-size: 0.92rem;">
+                    <p style="margin-top:18px;margin-bottom:0;font-size:.92rem;">
                         Windows 11 • Free edition available • Premium optional
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="support">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">ProtectKit Support</div>
-                    <h2>Real support from a real ProtectKit mailbox</h2>
-                    <p>
-                        For help, bug reports, licensing questions, feedback, or feature
-                        suggestions, contact ProtectKit directly at
-                        <strong>support@getprotectkit.com</strong>.
-                    </p>
-                </div>
-
-                <div class="feature-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon">?</div>
-                        <h3>Product Support</h3>
-                        <p>
-                            Get help with installation, features, security findings,
-                            settings, licensing, and general ProtectKit questions.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a class="button button-secondary"
-                               href="mailto:support@getprotectkit.com?subject=ProtectKit%20Support%20Request">
-                                Email Support
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">!</div>
-                        <h3>Report a Bug</h3>
-                        <p>
-                            Tell us what you were doing, what you expected, and what happened.
-                            Include non-sensitive screenshots or exported logs when useful.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a class="button button-secondary"
-                               href="mailto:support@getprotectkit.com?subject=ProtectKit%20Bug%20Report">
-                                Report a Bug
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">+</div>
-                        <h3>Feedback &amp; Suggestions</h3>
-                        <p>
-                            Share feature ideas, usability feedback, or suggestions for
-                            improving ProtectKit.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a class="button button-secondary"
-                               href="mailto:support@getprotectkit.com?subject=ProtectKit%20Feedback%20or%20Feature%20Suggestion">
-                                Send Feedback
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="evidence-panel" style="margin-top: 24px;">
-                    <div class="evidence-section">
-                        <strong>Official ProtectKit website</strong>
-                        <p>
-                            <a href="https://getprotectkit.com/"
-                               style="color: var(--primary-dark); font-weight: 800;">
-                                https://getprotectkit.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Official support address</strong>
-                        <p>
-                            ProtectKit support email:
-                            <a href="mailto:support@getprotectkit.com?subject=ProtectKit%20Support%20Request"
-                               style="color: var(--primary-dark); font-weight: 800;">
-                                support@getprotectkit.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Before sending logs or screenshots</strong>
-                        <p>
-                            Review anything you attach and remove passwords, authentication
-                            tokens, private keys, recovery codes, or other sensitive information.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Privacy</strong>
-                        <p>
-                            ProtectKit is designed to provide security visibility without
-                            turning the product into a surveillance tool. See the Privacy Policy
-                            below for more information.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="privacy">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">Privacy Policy</div>
-                    <h2>Privacy should be clear, too</h2>
-                    <p>
-                        This summary explains the privacy principles behind
-                        ProtectKit. It can be expanded as services are added.
-                    </p>
-                </div>
-
-                <div class="evidence-panel">
-                    <div class="evidence-section">
-                        <strong>Local security information</strong>
-                        <p>
-                            ProtectKit analyzes security settings, processes,
-                            services, startup entries, network connections, and
-                            related system information on your Windows computer
-                            to provide its security and maintenance features.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Payments</strong>
-                        <p>
-                            Premium purchases are processed by the applicable
-                            payment provider. ProtectKit does not need to store
-                            your full payment-card information.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>External lookups</strong>
-                        <p>
-                            Features that use external reputation or investigation
-                            services may send the information required for that
-                            lookup, such as a file hash or remote address, to the
-                            selected service.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Logs and reports</strong>
-                        <p>
-                            ProtectKit can create local activity logs and reports
-                            so you can review and export security information.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Questions</strong>
-                        <p>
-                            Privacy questions can be sent to
-                            <a href="mailto:support@getprotectkit.com?subject=ProtectKit%20Privacy%20Question"
-                               style="color: var(--primary-dark); font-weight: 800;">
-                                support@getprotectkit.com
-                            </a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="terms">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">Terms of Service</div>
-                    <h2>Use ProtectKit responsibly</h2>
-                    <p>
-                        ProtectKit provides security, investigation, configuration,
-                        and maintenance assistance for Windows computers.
-                    </p>
-                </div>
-
-                <div class="evidence-panel">
-                    <div class="evidence-section">
-                        <strong>No guarantee of complete protection</strong>
-                        <p>
-                            No security product can guarantee that a computer will
-                            never be compromised. ProtectKit is intended to improve
-                            visibility, configuration, investigation, and response.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>System changes</strong>
-                        <p>
-                            Some ProtectKit features can change Windows settings,
-                            firewall configuration, DNS settings, services, startup
-                            behavior, or other system configuration. Review
-                            recommendations before applying changes.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Third-party services</strong>
-                        <p>
-                            Optional external services and links are governed by
-                            their own terms and privacy policies.
-                        </p>
-                    </div>
-
-                    <div class="evidence-section">
-                        <strong>Support</strong>
-                        <p>
-                            Questions about these terms can be sent to
-                            <a href="mailto:support@getprotectkit.com?subject=ProtectKit%20Terms%20Question"
-                               style="color: var(--primary-dark); font-weight: 800;">
-                                support@getprotectkit.com
-                            </a>.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div>
-                <div class="brand">
-                    <span class="brand-mark">P</span>
-                    <span>ProtectKit</span>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="brand">
+                        <span class="brand-mark">P</span>
+                        <span>ProtectKit</span>
+                    </div>
+
+                    <div class="footer-copy" style="margin-top:14px;">
+                        Windows security that explains itself.
+                        <br><br>
+                        © 2026 ProtectKit. All rights reserved.
+                    </div>
                 </div>
 
-                <div class="footer-copy">
-                    © 2026 ProtectKit. All rights reserved.
-                    <br>
-                    <a href="https://getprotectkit.com/" style="font-weight: 700;">
-                        getprotectkit.com
+                <div class="footer-column">
+                    <strong>Product</strong>
+                    <a href="features.html">Features</a>
+                    <a href="premium.html">Free vs Premium</a>
+                    <a href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Microsoft Store
                     </a>
+                    <a href="affiliates.html">Affiliates</a>
                 </div>
-            </div>
 
-            <div class="footer-links">
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
-                <a href="mailto:support@getprotectkit.com?subject=ProtectKit%20Support%20Request">Support</a>
+                <div class="footer-column">
+                    <strong>Help</strong>
+                    <a href="help.html">Help Center</a>
+                    <a href="help-getting-started.html">Getting Started</a>
+                    <a href="help-understanding-findings.html">Understanding Findings</a>
+                    <a href="help-security-investigation.html">Investigation Guide</a>
+                    <a href="help-troubleshooting.html">Troubleshooting</a>
+                    <a href="help-free-vs-premium.html">Free vs Premium Help</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+
+                <div class="footer-column">
+                    <strong>Company &amp; Legal</strong>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="support.html">Support</a>
+                    <a href="security.html">Security Practices</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
