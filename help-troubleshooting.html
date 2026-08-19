@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Troubleshoot common ProtectKit problems including administrator requirements, scans and repairs, online lookups, Premium access, network features, logs, restarts, and Windows security operations.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://getprotectkit.com/help-troubleshooting.html">
+<title>ProtectKit Troubleshooting | Help Center</title>
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f5f8fc;
+        }
+
+        header {
+            background: #0f2747;
+            color: white;
+            padding: 28px 20px;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .tagline {
+            margin: 4px 0 0;
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 20px 50px;
+        }
+
+        .policy {
+            background: white;
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #102a4c;
+            font-size: 34px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            color: #163b67;
+            font-size: 21px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        .effective-date {
+            color: #64748b;
+            margin-bottom: 26px;
+        }
+
+        .notice {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 14px 18px;
+            margin: 22px 0;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 0 20px 30px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .policy {
+                padding: 24px 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+<style>
+.help-hero{padding:82px 0 62px;text-align:center}
+.help-hero h1{max-width:900px;margin:14px auto 20px;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em}
+.help-hero .hero-description{margin:0 auto}
+.article-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:42px;align-items:start}
+.toc{position:sticky;top:24px;padding:24px;border:1px solid var(--border);border-radius:18px;background:var(--surface-soft)}
+.toc strong{display:block;margin-bottom:12px}
+.toc a{display:block;padding:7px 0;color:var(--text-soft);text-decoration:none;font-weight:700}
+.help-content{max-width:800px}
+.help-content h2{margin:56px 0 14px;font-size:clamp(1.7rem,3vw,2.3rem)}
+.help-content h2:first-child{margin-top:0}
+.help-content p,.help-content li{color:var(--text-soft)}
+.help-content li{margin:8px 0}
+.issue{margin:22px 0;padding:26px;border:1px solid var(--border);border-radius:18px;background:#fff}
+.issue h3{margin:0 0 10px}
+.issue ol{padding-left:22px;margin-bottom:0}
+.callout{margin:24px 0;padding:22px 24px;border:1px solid #bddfff;border-radius:16px;background:var(--surface-soft)}
+.callout strong{display:block;margin-bottom:6px;color:var(--text)}
+.callout p{margin:0}
+.warning{border-color:#f1d28a;background:#fffaf0}
+.support-box{margin-top:34px;padding:30px;border:2px solid var(--primary);border-radius:22px;background:#fff}
+.support-box h2{margin-top:0}
+@media(max-width:850px){.article-layout{grid-template-columns:1fr}.toc{position:static}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container navigation">
+<a class="brand" href="index.html"><span class="brand-mark">P</span><span>ProtectKit</span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="premium.html">Free vs Premium</a><a href="help.html">Help</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<a class="button button-primary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">Download ProtectKit</a>
+</div></header>
+
+<main>
+<section class="help-hero"><div class="container">
+<div class="section-label">ProtectKit Help Center</div>
+<h1>ProtectKit <span style="color:var(--primary)">Troubleshooting</span></h1>
+<p class="hero-description">Start here when ProtectKit does not behave as expected. These steps cover common Windows permissions, scans, repairs, network functions, Premium access, online lookups, logs, and restart-related issues.</p>
+</div></section>
+
+<section class="section section-alt"><div class="container article-layout">
+<aside class="toc"><strong>On this page</strong>
+<a href="#start">1. Start here</a>
+<a href="#open">2. ProtectKit won't open</a>
+<a href="#admin">3. Admin Required</a>
+<a href="#scan">4. Scan problems</a>
+<a href="#repair">5. Repair problems</a>
+<a href="#network">6. Network information</a>
+<a href="#online">7. Online lookups</a>
+<a href="#premium">8. Premium access</a>
+<a href="#restart">9. Restart Required</a>
+<a href="#findings">10. Unexpected findings</a>
+<a href="#logs">11. Logs and reports</a>
+<a href="#support">12. Contact Support</a>
+</aside>
+
+<article class="help-content">
+<h2 id="start">1. Start with the simplest checks</h2>
+<p>Many apparent ProtectKit problems are caused by Windows permissions, temporary Windows conditions, internet connectivity, an operation that is still running, or a restart that has not yet been completed.</p>
+<p>Before making major changes, check the message ProtectKit is displaying and identify the exact page, feature, button, scan, or operation involved.</p>
+
+<div class="callout"><strong>Do not repeatedly interrupt a system operation because it appears slow.</strong><p>Some Windows scans, servicing commands, repairs, and maintenance operations can take a significant amount of time. Interrupting them can create additional problems.</p></div>
+
+<h2 id="open">2. ProtectKit will not open</h2>
+<div class="issue">
+<h3>If ProtectKit does not launch</h3>
+<ol>
+<li>Try opening ProtectKit again from the Windows Start menu.</li>
+<li>Check whether ProtectKit is already running in the notification area or system tray.</li>
+<li>If Windows recently installed or updated ProtectKit, restart Windows and try again.</li>
+<li>Confirm Windows itself is operating normally and that no pending restart is interfering with application startup.</li>
+<li>If Windows displays an error, record the exact wording or take a screenshot.</li>
+<li>If the problem continues, contact ProtectKit Support with the error and the steps that reproduce it.</li>
+</ol>
+</div>
+
+<h2 id="admin">3. ProtectKit says Admin Required</h2>
+<p>This normally means Windows will not allow ProtectKit to complete the requested operation with standard user permissions.</p>
+<p>Security settings, firewall changes, system repair, service operations, and other protected Windows functions can require administrator elevation.</p>
+<div class="callout"><strong>Admin Required is not a malware warning.</strong><p>It describes the permission required for the operation. Review what ProtectKit is asking to do before approving a Windows User Account Control prompt.</p></div>
+<p>If you do not have administrator access to the computer, some ProtectKit operations cannot be completed.</p>
+
+<h2 id="scan">4. A scan appears stuck or does not complete</h2>
+<div class="issue">
+<h3>For Defender or other lengthy scans</h3>
+<ol>
+<li>Allow enough time for the selected scan type to complete.</li>
+<li>A Full Scan can take substantially longer than a Quick Scan because more of the computer must be examined.</li>
+<li>Do not start the same operation repeatedly while another instance may still be running.</li>
+<li>Check whether Windows Security or Microsoft Defender reports that a scan is already in progress.</li>
+<li>If ProtectKit reports an error, save the exact error message.</li>
+<li>Restart Windows only after you are confident the active operation has ended or failed.</li>
+</ol>
+</div>
+<p>ProtectKit can initiate or display information from Microsoft Defender, but the underlying Defender scanning engine is a Windows component. A Defender error may therefore originate from Windows rather than ProtectKit itself.</p>
+
+<h2 id="repair">5. A Maintenance or repair operation fails</h2>
+<p>ProtectKit's Maintenance workflows can invoke meaningful Windows cleanup, servicing, repair, optimization, recovery, or related operations. Some of those operations depend on Windows components and can fail for reasons outside ProtectKit's direct control.</p>
+<div class="issue">
+<h3>If a repair fails</h3>
+<ol>
+<li>Read the complete ProtectKit result or Windows error.</li>
+<li>Do not immediately rerun the operation many times.</li>
+<li>Check whether Windows requires a restart.</li>
+<li>Restart Windows when appropriate and retry once.</li>
+<li>If the same operation fails again, preserve the error information and relevant ProtectKit log entries.</li>
+<li>Contact Support if you are unsure whether it is safe to continue.</li>
+</ol>
+</div>
+<div class="callout warning"><strong>Do not power off the computer during an active Windows servicing or repair operation.</strong><p>If an operation explicitly says not to interrupt it, allow it to finish unless Windows itself becomes completely unresponsive and normal recovery procedures are necessary.</p></div>
+
+<h2 id="network">6. Live Connections or network information looks wrong</h2>
+<p>Network activity changes rapidly. A connection can appear and disappear between refreshes, and some applications create many short-lived connections.</p>
+<p>If expected information is missing:</p>
+<ul>
+<li>Refresh the view.</li>
+<li>Check whether monitoring is paused.</li>
+<li>Confirm the application you expect to see is currently running and communicating.</li>
+<li>Remember that UDP and TCP activity behave differently and not every network event remains visible for long.</li>
+<li>Check whether Windows permissions limit the information ProtectKit can retrieve.</li>
+</ul>
+<p>An unfamiliar remote address is not automatically malicious. Use ProtectKit's investigation information and other available evidence before reaching a conclusion.</p>
+
+<h2 id="online">7. An online reputation or investigation lookup fails</h2>
+<p>Optional online investigation features require internet access and depend on external services. A lookup can fail even when ProtectKit itself is operating correctly.</p>
+<div class="issue">
+<h3>Check the following</h3>
+<ol>
+<li>Confirm the computer has internet access.</li>
+<li>Confirm Windows Firewall or another security product is not blocking the required connection.</li>
+<li>Retry the lookup after a short period if the external provider may be temporarily unavailable.</li>
+<li>Check whether the lookup requires a valid file hash, IP address, domain, or other supported identifier.</li>
+<li>If only one external lookup is failing while other ProtectKit features work, the problem may be specific to that external service.</li>
+</ol>
+</div>
+
+<h2 id="premium">8. I purchased Premium but a feature is still locked</h2>
+<p>ProtectKit must be able to recognize a valid Premium entitlement before enabling Premium-only functionality.</p>
+<div class="issue">
+<h3>Try these steps</h3>
+<ol>
+<li>Confirm that the ProtectKit Premium purchase completed successfully.</li>
+<li>Confirm the computer is connected to the internet.</li>
+<li>Close ProtectKit and reopen it if the purchase occurred while ProtectKit was already running.</li>
+<li>Check whether all Premium features are unavailable or only one specific feature.</li>
+<li>Record any licensing or entitlement message ProtectKit displays.</li>
+<li>If Premium remains unavailable, contact Support.</li>
+</ol>
+</div>
+<p>Do not send passwords or complete payment-card details when requesting support.</p>
+<p><a class="button button-secondary" href="help-free-vs-premium.html">Free vs Premium Help</a></p>
+
+<h2 id="restart">9. ProtectKit says Restart Required</h2>
+<p>Some Windows changes do not fully take effect until Windows restarts. ProtectKit may therefore indicate that a restart is required after certain security, maintenance, repair, or configuration operations.</p>
+<p>Save your work and restart Windows when practical. After Windows starts again, reopen ProtectKit and verify the relevant status.</p>
+<p>If ProtectKit continues to report Restart Required after a completed restart, refresh or repeat the relevant verification. If the message remains unexpectedly, contact Support with the feature involved.</p>
+
+<h2 id="findings">10. ProtectKit reports something unexpected</h2>
+<p>If ProtectKit labels something suspicious, unknown, critical, needs attention, or inconclusive, do not assume the label alone proves malware is present.</p>
+<p>Review the evidence ProtectKit provides. Depending on the feature, useful context can include the executable path, publisher, digital signature, file hash, service information, startup behavior, associated network activity, destination information, and reputation results.</p>
+<div class="callout"><strong>Unexpected does not mean malicious.</strong><p>If you think ProtectKit has incorrectly classified legitimate software, preserve the details and report the possible false positive instead of deleting the evidence.</p></div>
+<p><a class="button button-secondary" href="help-understanding-findings.html">Understanding ProtectKit Findings</a></p>
+
+<h2 id="logs">11. Use ProtectKit logs when troubleshooting</h2>
+<p>ProtectKit logs important application and security activity. Logs can help establish what happened before an error, what operation was attempted, and what ProtectKit observed.</p>
+<p>When reporting a repeatable problem, useful information includes:</p>
+<ul>
+<li>The ProtectKit page or feature involved.</li>
+<li>What you clicked or attempted to do.</li>
+<li>What you expected to happen.</li>
+<li>What actually happened.</li>
+<li>The exact error message.</li>
+<li>The approximate date and time of the problem.</li>
+<li>Relevant ProtectKit log information.</li>
+<li>A screenshot when it helps explain the issue.</li>
+</ul>
+<div class="callout"><strong>Review logs and screenshots before sharing them.</strong><p>They may contain file paths, process information, network addresses, system details, or other information about your computer. Never send passwords, authentication tokens, recovery codes, private keys, or complete payment-card numbers.</p></div>
+
+<h2 id="support">12. When to contact ProtectKit Support</h2>
+<p>Contact Support when a problem continues after the basic troubleshooting steps, when you repeatedly receive the same error, when Premium access cannot be recognized, when you believe ProtectKit has produced a false positive, or when you are unsure whether a recommended action is safe.</p>
+
+<div class="support-box">
+<h2>Make the support request useful</h2>
+<p>You do not need to be a technical expert. Tell us what you were doing, which page or feature was involved, what happened, and what ProtectKit displayed.</p>
+<p><strong>Email:</strong> support@getprotectkit.com</p>
+<div class="hero-actions">
+<a class="button button-primary" href="mailto:support@getprotectkit.com?subject=ProtectKit%20Troubleshooting">Contact Support</a>
+<a class="button button-secondary" href="support.html">Support Center</a>
+</div>
+</div>
+
+<p style="margin-top:34px"><a href="help.html" style="font-weight:800;color:var(--primary-dark)">← Return to ProtectKit Help Center</a></p>
+</article>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid">
+<div><div class="brand"><span class="brand-mark">P</span><span>ProtectKit</span></div><div class="footer-copy">© 2026 ProtectKit. All rights reserved.</div></div>
+<div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="help.html">Help</a><a href="support.html">Support</a></div>
+</div></footer>
+</body>
+</html>
