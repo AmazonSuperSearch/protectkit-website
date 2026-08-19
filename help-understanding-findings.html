@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn how to interpret ProtectKit security findings, confidence, evidence, warnings, suspicious items, unknown items, critical findings, and Admin Required results.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://getprotectkit.com/help-understanding-findings.html">
+<title>Understanding ProtectKit Findings | Help Center</title>
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f5f8fc;
+        }
+
+        header {
+            background: #0f2747;
+            color: white;
+            padding: 28px 20px;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .tagline {
+            margin: 4px 0 0;
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 20px 50px;
+        }
+
+        .policy {
+            background: white;
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #102a4c;
+            font-size: 34px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            color: #163b67;
+            font-size: 21px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        .effective-date {
+            color: #64748b;
+            margin-bottom: 26px;
+        }
+
+        .notice {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 14px 18px;
+            margin: 22px 0;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 0 20px 30px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .policy {
+                padding: 24px 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+<style>
+.help-hero{padding:82px 0 62px;text-align:center}
+.help-hero h1{max-width:900px;margin:14px auto 20px;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em}
+.help-hero .hero-description{margin:0 auto}
+.article-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:42px;align-items:start}
+.toc{position:sticky;top:24px;padding:24px;border:1px solid var(--border);border-radius:18px;background:var(--surface-soft)}
+.toc strong{display:block;margin-bottom:12px} .toc a{display:block;padding:7px 0;color:var(--text-soft);text-decoration:none;font-weight:700}
+.help-content{max-width:800px} .help-content h2{margin:56px 0 14px;font-size:clamp(1.7rem,3vw,2.3rem)} .help-content h2:first-child{margin-top:0}
+.help-content p,.help-content li{color:var(--text-soft)} .help-content li{margin:8px 0}
+.finding{margin:18px 0;padding:24px;border:1px solid var(--border);border-radius:18px;background:#fff}
+.finding h3{margin:0 0 8px} .finding p{margin:6px 0}
+.callout{margin:24px 0;padding:22px 24px;border:1px solid #bddfff;border-radius:16px;background:var(--surface-soft)}
+.callout strong{display:block;margin-bottom:6px;color:var(--text)} .callout p{margin:0}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.evidence-card{padding:22px;border:1px solid var(--border);border-radius:16px;background:#fff}
+.evidence-card h3{margin-top:0} .evidence-card p{margin-bottom:0}
+@media(max-width:850px){.article-layout{grid-template-columns:1fr}.toc{position:static}}
+@media(max-width:650px){.evidence-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container navigation">
+<a class="brand" href="index.html"><span class="brand-mark">P</span><span>ProtectKit</span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="premium.html">Free vs Premium</a><a href="help.html">Help</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<a class="button button-primary" href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT" target="_blank" rel="noopener noreferrer">Download ProtectKit</a>
+</div>
+</header>
+<main>
+<section class="help-hero"><div class="container">
+<div class="section-label">ProtectKit Help Center</div>
+<h1>Understanding <span style="color:var(--primary)">ProtectKit Findings</span></h1>
+<p class="hero-description">Learn what ProtectKit's statuses and warnings mean, how evidence affects a finding, and why a security result should be investigated before you take action.</p>
+</div></section>
+
+<section class="section section-alt"><div class="container article-layout">
+<aside class="toc">
+<strong>On this page</strong>
+<a href="#principle">1. The core principle</a>
+<a href="#statuses">2. Finding statuses</a>
+<a href="#evidence">3. Evidence</a>
+<a href="#confidence">4. Confidence</a>
+<a href="#suspicious">5. Suspicious findings</a>
+<a href="#unknown">6. Unknown items</a>
+<a href="#critical">7. Critical findings</a>
+<a href="#admin">8. Admin Required</a>
+<a href="#inconclusive">9. Inconclusive</a>
+<a href="#action">10. Before taking action</a>
+<a href="#false-positive">11. False positives</a>
+</aside>
+
+<article class="help-content">
+<h2 id="principle">1. ProtectKit's core principle</h2>
+<p>ProtectKit is designed to help you distinguish between <strong>what was observed</strong> and <strong>what that observation may mean</strong>. Those are not always the same thing.</p>
+<div class="callout"><strong>A warning is evidence to review, not automatic proof of malware.</strong><p>Legitimate software can sometimes look unusual, and malicious software can sometimes appear normal. ProtectKit aims to show useful context so you can make a better decision.</p></div>
+<p>Whenever possible, consider multiple pieces of evidence rather than relying on a single name, score, connection, reputation result, or unusual behavior.</p>
+
+<h2 id="statuses">2. Common ProtectKit finding statuses</h2>
+
+<div class="finding"><h3>Protecting / Protected</h3><p>The relevant protection or security control appears to be active based on the information ProtectKit was able to verify.</p><p>This does not guarantee that the computer is free from threats. It means the particular protection being checked appears to be in the expected state.</p></div>
+
+<div class="finding"><h3>Trusted</h3><p>Available evidence provides reasons to regard the item as relatively trustworthy. Examples can include expected location, known publisher information, valid signing information, normal behavior, or other supporting evidence.</p><p>Trust is not an absolute guarantee that software is safe.</p></div>
+
+<div class="finding"><h3>Needs Attention / Warning</h3><p>ProtectKit identified a condition that deserves review. This may be a disabled protection, unusual configuration, incomplete security setting, or another condition that could reduce protection or require a decision.</p><p>Read the explanation before changing anything.</p></div>
+
+<div class="finding"><h3>Suspicious</h3><p>ProtectKit found one or more characteristics that justify closer investigation. Suspicious does <strong>not</strong> mean ProtectKit has proven the item is malicious.</p></div>
+
+<div class="finding"><h3>Unknown</h3><p>ProtectKit does not have enough reliable evidence to classify the item confidently. Unknown should normally lead to investigation, not automatic removal.</p></div>
+
+<div class="finding"><h3>Critical</h3><p>A critical result indicates a high-priority condition based on the feature's available evidence or security logic. Review the details promptly, but still verify what ProtectKit found before taking an irreversible action.</p></div>
+
+<div class="finding"><h3>Inconclusive</h3><p>ProtectKit could not reach a reliable conclusion from the information available. Permissions, unavailable data, external-service failures, unusual configurations, or conflicting evidence can contribute to an inconclusive result.</p></div>
+
+<div class="finding"><h3>Admin Required</h3><p>Windows requires elevated administrator permission for ProtectKit to complete the requested check or action. This is a permissions state, not a malware classification.</p></div>
+
+<h2 id="evidence">3. What counts as useful evidence?</h2>
+<p>The evidence available depends on the ProtectKit feature and the item being investigated. Useful evidence may include:</p>
+<div class="evidence-grid">
+<div class="evidence-card"><h3>Identity</h3><p>File name, executable path, service name, process name, startup location, or other identifying information.</p></div>
+<div class="evidence-card"><h3>Publisher</h3><p>Publisher information and whether the software appears to come from an expected organization.</p></div>
+<div class="evidence-card"><h3>Digital signature</h3><p>Whether an executable is digitally signed and what ProtectKit can determine about that signature.</p></div>
+<div class="evidence-card"><h3>File hash</h3><p>A cryptographic identifier can help distinguish one exact file from another and can be useful for reputation research.</p></div>
+<div class="evidence-card"><h3>Network behavior</h3><p>Remote addresses, ports, protocols, connection state, and the process associated with network activity.</p></div>
+<div class="evidence-card"><h3>System behavior</h3><p>How an item starts, what it changes, where it runs from, and other behavior relevant to the feature being analyzed.</p></div>
+</div>
+
+<h2 id="confidence">4. Confidence matters</h2>
+<p>Security analysis is rarely perfect. A strong conclusion should normally be supported by stronger or multiple pieces of evidence. Weak, incomplete, or conflicting evidence should produce a more cautious interpretation.</p>
+<p>ProtectKit's goal is to communicate uncertainty rather than hide it. If evidence is insufficient, an Unknown or Inconclusive result can be more responsible than pretending certainty exists.</p>
+
+<h2 id="suspicious">5. What should I do with a Suspicious finding?</h2>
+<p>Do not panic and do not immediately delete the item. Start by examining the details ProtectKit provides.</p>
+<ul>
+<li>Check the file or executable path.</li>
+<li>Check the publisher and digital signature.</li>
+<li>Determine whether you recognize the software.</li>
+<li>Review associated startup or service behavior.</li>
+<li>Review network activity when relevant.</li>
+<li>Use available investigation and reputation tools for additional context.</li>
+<li>Consider whether several independent signals point toward the same conclusion.</li>
+</ul>
+<div class="callout"><strong>Context changes the meaning of evidence.</strong><p>A program connecting to the internet is normal for many applications. The same connection may deserve more attention if the executable is unsigned, runs from an unusual location, appeared unexpectedly, and communicates with an unexplained destination.</p></div>
+
+<h2 id="unknown">6. What does Unknown mean?</h2>
+<p>Unknown means ProtectKit lacks enough reliable evidence to make a stronger classification. It does not mean safe and it does not mean malicious.</p>
+<p>New software, uncommon applications, custom utilities, unsigned programs, and files with limited reputation information can all be difficult to classify automatically.</p>
+<p>If the item matters, investigate it using the available evidence rather than treating the word Unknown as a verdict.</p>
+
+<h2 id="critical">7. What does Critical mean?</h2>
+<p>Critical is intended to draw attention to a high-priority condition. The exact meaning depends on the ProtectKit feature producing the result.</p>
+<p>A critical security configuration problem is different from a suspicious executable, for example. Read the explanation and supporting evidence so you understand what ProtectKit is actually reporting.</p>
+<p>If a critical result involves a potentially destructive response, preserve relevant evidence and understand the recommended action before proceeding.</p>
+
+<h2 id="admin">8. Admin Required is not a threat result</h2>
+<p>Windows restricts access to many security-sensitive settings and operations. ProtectKit may need administrator permission to inspect or change those areas.</p>
+<p>If ProtectKit displays Admin Required, it means the operation could not be completed with the current permission level. It does not mean administrator access itself is unsafe, nor does it mean ProtectKit detected an infection.</p>
+
+<h2 id="inconclusive">9. Why would a result be Inconclusive?</h2>
+<p>An inconclusive result can occur when ProtectKit cannot obtain enough dependable information. Possible reasons include insufficient Windows permissions, missing information, conflicting evidence, a temporary Windows problem, a network failure, or an unavailable external service.</p>
+<p>Try the appropriate check again when conditions change. If the result remains inconclusive and the item is important, investigate it manually or contact ProtectKit Support.</p>
+
+<h2 id="action">10. Before blocking, disabling, or removing something</h2>
+<p>Some security actions can interrupt legitimate applications or Windows functionality. Before taking an irreversible action:</p>
+<ul>
+<li>Understand exactly what ProtectKit found.</li>
+<li>Confirm which file, process, service, rule, setting, or connection is involved.</li>
+<li>Review more than one piece of evidence whenever possible.</li>
+<li>Consider whether the item belongs to software you intentionally installed.</li>
+<li>Preserve logs, screenshots, hashes, paths, or other evidence if the activity may require further investigation.</li>
+<li>Prefer reversible actions when appropriate.</li>
+<li>Maintain appropriate Windows recovery and backup options before significant system changes.</li>
+</ul>
+
+<h2 id="false-positive">11. False positives and incorrect findings</h2>
+<p>A false positive occurs when legitimate activity is incorrectly treated as suspicious or threatening. No security analysis system can guarantee that false positives will never occur.</p>
+<p>If you believe ProtectKit is repeatedly reporting a legitimate item incorrectly, send a false-positive report. Include the exact finding, the feature involved, file or process information, publisher or signature details when available, and why you believe the item is legitimate.</p>
+<p><a class="button button-secondary" href="support.html">Report a False Positive</a></p>
+
+<div class="callout"><strong>The goal is informed action.</strong><p>ProtectKit is designed to help you see the evidence, understand why it matters, and choose the next step. It should not pressure you into treating every unfamiliar item as a threat.</p></div>
+
+<p style="margin-top:34px"><a href="help.html" style="font-weight:800;color:var(--primary-dark)">← Return to ProtectKit Help Center</a></p>
+</article>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid">
+<div><div class="brand"><span class="brand-mark">P</span><span>ProtectKit</span></div><div class="footer-copy">© 2026 ProtectKit. All rights reserved.<br><a href="https://getprotectkit.com/" style="font-weight:700">getprotectkit.com</a></div></div>
+<div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="help.html">Help</a><a href="support.html">Support</a></div>
+</div></footer>
+</body>
+</html>
