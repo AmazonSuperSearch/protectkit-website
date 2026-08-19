@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore ProtectKit features for Windows 11 security, monitoring, investigation, hardening, privacy, network visibility, threat detection, maintenance, and recovery.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1687e8">
+
+    <link rel="canonical" href="https://getprotectkit.com/features.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ProtectKit">
+    <meta property="og:title" content="ProtectKit Features | Windows Security, Investigation & Maintenance">
+    <meta property="og:description" content="See how ProtectKit helps you understand Windows security, investigate suspicious activity, strengthen protections, and maintain your PC.">
+    <meta property="og:url" content="https://getprotectkit.com/features.html">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ProtectKit Features">
+    <meta name="twitter:description" content="Windows security, investigation, monitoring, privacy, maintenance, and recovery in one clear application.">
+
+    <title>ProtectKit Features | Windows Security, Investigation & Maintenance</title>
+
+    <style>
+        :root {
+            --background: #f4f8fc;
+            --surface: #ffffff;
+            --surface-soft: #edf6ff;
+            --primary: #1687e8;
+            --primary-dark: #075ba8;
+            --text: #102235;
+            --text-soft: #52677a;
+            --border: #d9e6f2;
+            --success: #149760;
+            --warning: #d97706;
+            --shadow: 0 18px 45px rgba(17, 63, 103, 0.10);
+            --radius-large: 24px;
+            --radius-medium: 16px;
+            --max-width: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                Inter,
+                Segoe UI,
+                Arial,
+                sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navigation {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--primary),
+                    var(--primary-dark)
+                );
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 900;
+            box-shadow: 0 8px 20px rgba(22, 135, 232, 0.28);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            color: var(--text-soft);
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 12px;
+            font-weight: 750;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--primary-dark)
+                );
+            color: white;
+            box-shadow: 0 10px 24px rgba(22, 135, 232, 0.25);
+        }
+
+        .button-secondary {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 96px 0 72px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            align-items: center;
+            gap: 64px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid #bddfff;
+            border-radius: 999px;
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            font-weight: 750;
+        }
+
+        .eyebrow-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--success);
+            box-shadow: 0 0 0 5px rgba(20, 151, 96, 0.12);
+        }
+
+        h1 {
+            margin: 24px 0 22px;
+            max-width: 760px;
+            font-size: clamp(2.7rem, 6vw, 5.3rem);
+            line-height: 1.02;
+            letter-spacing: -0.055em;
+        }
+
+        .hero-highlight {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            max-width: 690px;
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 1.2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .hero-note {
+            margin-top: 18px;
+            color: var(--text-soft);
+            font-size: 0.92rem;
+        }
+
+        .product-panel {
+            position: relative;
+            min-height: 520px;
+            padding: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #e6f4ff,
+                    #ffffff
+                );
+            box-shadow: var(--shadow);
+        }
+
+        .product-window {
+            height: 100%;
+            min-height: 476px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 21px;
+            background: #ffffff;
+        }
+
+        .window-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 18px;
+            border-bottom: 1px solid var(--border);
+            background: #f8fbfe;
+        }
+
+        .window-title {
+            font-weight: 800;
+        }
+
+        .window-status {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e7f8f0;
+            color: var(--success);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .dashboard-content {
+            padding: 20px;
+        }
+
+        .security-score {
+            padding: 22px;
+            border-radius: 18px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #0d69b8,
+                    #1793ef
+                );
+            color: white;
+        }
+
+        .security-score strong {
+            display: block;
+            margin-top: 7px;
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+
+        .security-score small {
+            opacity: 0.84;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .status-card {
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: #ffffff;
+        }
+
+        .status-card-label {
+            color: var(--text-soft);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .status-card-value {
+            margin-top: 6px;
+            font-weight: 850;
+        }
+
+        .status-good {
+            color: var(--success);
+        }
+
+        .activity-card {
+            margin-top: 16px;
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .activity-title {
+            margin-bottom: 12px;
+            font-weight: 850;
+        }
+
+        .activity-row {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: 1px solid #edf2f7;
+            color: var(--text-soft);
+            font-size: 0.88rem;
+        }
+
+        .activity-row:first-of-type {
+            border-top: 0;
+        }
+
+        .activity-icon {
+            color: var(--success);
+            font-weight: 900;
+        }
+
+        .trust-strip {
+            padding: 18px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: white;
+        }
+
+        .trust-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 34px;
+            color: var(--text-soft);
+            font-weight: 700;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .trust-check {
+            color: var(--success);
+        }
+
+        .section {
+            padding: 92px 0;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: var(--primary-dark);
+            font-size: 0.88rem;
+            font-weight: 850;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin: 12px 0 16px;
+            font-size: clamp(2rem, 4vw, 3.35rem);
+            line-height: 1.08;
+            letter-spacing: -0.04em;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 1.08rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+            background: var(--surface);
+            box-shadow: 0 10px 30px rgba(19, 61, 96, 0.05);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-size: 1.35rem;
+            font-weight: 900;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.16rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .explain-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 52px;
+            align-items: center;
+        }
+
+        .explain-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .explain-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .explain-number {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-weight: 850;
+        }
+
+        .explain-item strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .explain-item p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .evidence-panel {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-large);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .evidence-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .evidence-badge {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #fff3dd;
+            color: var(--warning);
+            font-size: 0.78rem;
+            font-weight: 850;
+        }
+
+        .evidence-section {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .evidence-section:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .evidence-section strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .evidence-section p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 420px));
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .pricing-card {
+            position: relative;
+            padding: 34px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-large);
+            background: white;
+            box-shadow: 0 12px 34px rgba(19, 61, 96, 0.06);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: translateY(-8px);
+        }
+
+        .pricing-tag {
+            position: absolute;
+            top: -15px;
+            right: 24px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 850;
+        }
+
+        .pricing-card h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .price {
+            margin: 14px 0 4px;
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+        }
+
+        .price-note {
+            color: var(--text-soft);
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .pricing-features li {
+            padding: 9px 0;
+            color: var(--text-soft);
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            margin-right: 10px;
+            color: var(--success);
+            font-weight: 900;
+        }
+
+        .cta {
+            padding: 92px 0;
+        }
+
+        .cta-box {
+            padding: 54px;
+            border-radius: 30px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #082f53,
+                    #075fa9
+                );
+            color: white;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-box h2 {
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .cta-box p {
+            max-width: 660px;
+            margin: 0 auto 28px;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.08rem;
+        }
+
+        .cta-box .button-secondary {
+            background: white;
+            color: var(--primary-dark);
+            border: 0;
+        }
+
+        .site-footer {
+            padding: 44px 0;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        .footer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .footer-copy {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            font-weight: 650;
+        }
+
+        @media (max-width: 980px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid,
+            .explain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-panel {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .hero {
+                padding-top: 68px;
+            }
+
+            .feature-grid,
+            .pricing-grid,
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .cta-box {
+                padding: 38px 22px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navigation .button {
+                display: none;
+            }
+        }
+    </style>
+
+    <style>
+        .page-hero {
+            padding: 88px 0 64px;
+            text-align: center;
+        }
+
+        .page-hero .hero-description {
+            margin: 0 auto;
+        }
+
+        .category-nav {
+            padding: 18px 0;
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .category-links a {
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            font-weight: 750;
+        }
+
+        .category-links a:hover {
+            color: var(--primary-dark);
+            border-color: #bddfff;
+            background: var(--surface-soft);
+        }
+
+        .feature-card {
+            height: 100%;
+        }
+
+        .feature-card ul {
+            margin: 16px 0 0;
+            padding-left: 20px;
+            color: var(--text-soft);
+        }
+
+        .feature-card li {
+            margin: 7px 0;
+        }
+
+        .feature-badge {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-size: 0.78rem;
+            font-weight: 850;
+        }
+
+        .premium-badge {
+            background: #fff3dd;
+            color: var(--warning);
+        }
+
+        .feature-section {
+            scroll-margin-top: 96px;
+        }
+
+        .feature-section + .feature-section {
+            border-top: 1px solid var(--border);
+        }
+
+        .wide-card {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 980px) {
+            .wide-card {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="brand" href="index.html" aria-label="ProtectKit home">
+                <span class="brand-mark">P</span>
+                <span>ProtectKit</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="premium.html">Free vs Premium</a>
+                <a href="help.html">Help</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="support.html">Support</a>
+            </nav>
+
+            <a class="button button-primary"
+               href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+               target="_blank"
+               rel="noopener noreferrer">
+                Download ProtectKit
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Built for Windows 11
+                </div>
+
+                <h1>
+                    Security tools that help you
+                    <span class="hero-highlight">understand what is happening.</span>
+                </h1>
+
+                <p class="hero-description">
+                    ProtectKit brings Windows security, monitoring, investigation,
+                    hardening, privacy, maintenance, and recovery tools together in
+                    one application. Instead of only showing raw technical data,
+                    ProtectKit is designed to explain findings, show available
+                    evidence, and help you decide what to do next.
+                </p>
+
+                <div class="hero-actions" style="justify-content:center;">
+                    <a class="button button-primary"
+                       href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Get ProtectKit
+                    </a>
+
+                    <a class="button button-secondary" href="premium.html">
+                        Compare Free &amp; Premium
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="trust-strip">
+            <div class="container trust-items">
+                <div class="trust-item"><span class="trust-check">✓</span> Windows security visibility</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Plain-English explanations</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Investigation tools</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Guided response and recovery</div>
+            </div>
+        </div>
+
+        <div class="category-nav">
+            <div class="container category-links">
+                <a href="#core-security">Core Security</a>
+                <a href="#investigation">Investigation</a>
+                <a href="#advanced-protection">Advanced Protection</a>
+                <a href="#device-security">Device Security</a>
+                <a href="#privacy-maintenance">Privacy &amp; Maintenance</a>
+                <a href="#logging">Logs &amp; Reporting</a>
+            </div>
+        </div>
+
+        <section class="section section-alt feature-section" id="core-security">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Core Windows Security</div>
+                    <h2>Check and strengthen the protections already built into Windows</h2>
+                    <p>
+                        ProtectKit complements Windows security technologies by making
+                        important protections easier to inspect, configure, and understand.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">D</div>
+                        <h3>Microsoft Defender</h3>
+                        <p>
+                            Review Defender status, update protection, launch trusted
+                            Windows scans, and access important security information
+                            from one place.
+                        </p>
+                        <ul>
+                            <li>Quick, Full, Custom, and Offline scans</li>
+                            <li>Protection updates</li>
+                            <li>Windows Security access</li>
+                            <li>Scan activity logging</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">F</div>
+                        <h3>Firewall Management</h3>
+                        <p>
+                            Review Windows Firewall profiles, apply recommended
+                            configurations, inspect rules, and respond quickly when
+                            network isolation is needed.
+                        </p>
+                        <ul>
+                            <li>Profile status</li>
+                            <li>Recommended settings</li>
+                            <li>Firewall rule inspection</li>
+                            <li>Emergency network lockdown</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">H</div>
+                        <h3>Windows Hardening</h3>
+                        <p>
+                            Review important Windows security settings that can reduce
+                            attack surface and strengthen the operating system.
+                        </p>
+                        <ul>
+                            <li>SmartScreen</li>
+                            <li>SMBv1 and AutoRun</li>
+                            <li>PowerShell logging</li>
+                            <li>VBS, HVCI, and Credential Guard</li>
+                        </ul>
+                        <span class="feature-badge premium-badge">Advanced options in Premium</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">DNS</div>
+                        <h3>DNS Protection</h3>
+                        <p>
+                            Review your DNS configuration and apply supported secure DNS
+                            settings to improve protection against malicious or unwanted
+                            destinations.
+                        </p>
+                        <ul>
+                            <li>DNS assessment</li>
+                            <li>Secure DNS option</li>
+                            <li>Configuration guidance</li>
+                            <li>Protection status integration</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">S</div>
+                        <h3>System Change Monitor</h3>
+                        <p>
+                            Verify protected system files, security settings, and
+                            credential protections, then monitor important changes over time.
+                        </p>
+                        <ul>
+                            <li>System file verification</li>
+                            <li>Security setting checks</li>
+                            <li>Credential defense checks</li>
+                            <li>Change alerts and history</li>
+                        </ul>
+                        <span class="feature-badge premium-badge">Continuous monitoring in Premium</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">P</div>
+                        <h3>Protection Dashboard</h3>
+                        <p>
+                            Bring important ProtectKit findings together so you can see
+                            what is protected, what needs attention, and where to investigate next.
+                        </p>
+                        <ul>
+                            <li>Protection overview</li>
+                            <li>Recent activity</li>
+                            <li>Items needing attention</li>
+                            <li>Monitoring and scan summaries</li>
+                        </ul>
+                        <span class="feature-badge">Included</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section feature-section" id="investigation">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Investigation</div>
+                    <h2>Look deeper when something on your PC does not seem right</h2>
+                    <p>
+                        ProtectKit combines process, network, startup, service, signature,
+                        publisher, path, hash, and reputation information to help you
+                        investigate suspicious activity with more context.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">N</div>
+                        <h3>Live Connections</h3>
+                        <p>
+                            See which processes and services are communicating over the
+                            network and investigate the remote systems they contact.
+                        </p>
+                        <ul>
+                            <li>TCP and UDP connections</li>
+                            <li>Process and signature information</li>
+                            <li>Remote address investigation</li>
+                            <li>Hashes, RDAP/WHOIS, and reputation checks</li>
+                        </ul>
+                        <span class="feature-badge premium-badge">Continuous monitoring in Premium</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">A</div>
+                        <h3>Startup Program Review</h3>
+                        <p>
+                            Examine programs configured to start automatically with Windows
+                            and review the evidence behind each entry.
+                        </p>
+                        <ul>
+                            <li>Publisher and signature information</li>
+                            <li>Executable path</li>
+                            <li>Pause, re-enable, or remove entries</li>
+                            <li>Plain-English investigation guidance</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">SV</div>
+                        <h3>Services Analysis</h3>
+                        <p>
+                            Review Windows services, status, trust information, executable
+                            paths, and supporting evidence in a dedicated inspector.
+                        </p>
+                        <ul>
+                            <li>Status and trust scoring</li>
+                            <li>Executable location</li>
+                            <li>Publisher and signature evidence</li>
+                            <li>Investigation and reporting tools</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">ID</div>
+                        <h3>Intrusion Detection</h3>
+                        <p>
+                            Continuously monitors for suspicious connections to your computer,
+                            logs detected activity, alerts you to potential threats, and can
+                            optionally help block suspicious connections.
+                        </p>
+                        <span class="feature-badge premium-badge">Premium</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">SPY</div>
+                        <h3>Spyware &amp; Stalkerware Investigation</h3>
+                        <p>
+                            Look for suspicious software and behavior associated with unwanted
+                            monitoring while emphasizing evidence, confidence, and careful review
+                            before removal.
+                        </p>
+                        <span class="feature-badge premium-badge">Advanced scanning in Premium</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">?</div>
+                        <h3>Plain-English Findings</h3>
+                        <p>
+                            ProtectKit is designed to help explain what was found, why it matters,
+                            what evidence supports the finding, and what action makes sense next.
+                        </p>
+                        <span class="feature-badge">Core ProtectKit design</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt feature-section" id="advanced-protection">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Advanced Protection</div>
+                    <h2>Detect suspicious behavior, not just known file names</h2>
+                    <p>
+                        ProtectKit includes newer protection layers designed to identify
+                        suspicious activity patterns and give users understandable evidence
+                        before they act.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">R</div>
+                        <h3>Ransomware Behavior Protection</h3>
+                        <p>
+                            Watch for suspicious file activity patterns that can indicate
+                            ransomware-like behavior and surface the evidence needed for review.
+                        </p>
+                        <ul>
+                            <li>High-volume file activity awareness</li>
+                            <li>Behavior-based risk signals</li>
+                            <li>Investigation guidance</li>
+                            <li>Response and recovery recommendations</li>
+                        </ul>
+                        <span class="feature-badge premium-badge">Premium protection</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">MC</div>
+                        <h3>Malicious Code Detection</h3>
+                        <p>
+                            Add another layer of analysis for suspicious code and activity
+                            that may deserve investigation even when a traditional signature
+                            is not available.
+                        </p>
+                        <ul>
+                            <li>Behavior-focused analysis</li>
+                            <li>Evidence-based findings</li>
+                            <li>Risk explanation</li>
+                            <li>Recommended next actions</li>
+                        </ul>
+                        <span class="feature-badge premium-badge">Premium protection</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">AI</div>
+                        <h3>Threat Correlation</h3>
+                        <p>
+                            ProtectKit's direction is to connect evidence across processes,
+                            files, network activity, system changes, and protection status
+                            so suspicious events can be understood as a larger sequence.
+                        </p>
+                        <span class="feature-badge premium-badge">Advanced capability</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section feature-section" id="device-security">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Connected Device Security</div>
+                    <h2>Protection for connection paths people often overlook</h2>
+                    <p>
+                        ProtectKit extends visibility beyond traditional Windows settings
+                        with tools focused on connected USB and Bluetooth devices.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">USB</div>
+                        <h3>USB Security</h3>
+                        <p>
+                            Review connected USB devices and use ProtectKit's device-security
+                            workflow to understand what is attached to the computer.
+                        </p>
+                        <ul>
+                            <li>Connected device visibility</li>
+                            <li>Device-focused security review</li>
+                            <li>Security logging</li>
+                            <li>Guided investigation</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">BT</div>
+                        <h3>Bluetooth Security</h3>
+                        <p>
+                            Review Bluetooth-related security information and connected-device
+                            activity as part of a broader Windows protection strategy.
+                        </p>
+                        <ul>
+                            <li>Bluetooth security visibility</li>
+                            <li>Connected-device awareness</li>
+                            <li>Security guidance</li>
+                            <li>Activity logging</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">+</div>
+                        <h3>Extra Layers of Visibility</h3>
+                        <p>
+                            USB and Bluetooth security add coverage for device pathways that
+                            are easy to ignore when users think only about files, websites,
+                            and antivirus scans.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt feature-section" id="privacy-maintenance">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Privacy, Maintenance &amp; Recovery</div>
+                    <h2>Security is easier when the system is healthy and understandable</h2>
+                    <p>
+                        ProtectKit also includes tools for privacy review, cleanup,
+                        Windows repair, optimization, recovery, and safer system maintenance.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">PR</div>
+                        <h3>Privacy Tools</h3>
+                        <p>
+                            Review supported Windows privacy-related settings and keep privacy
+                            checks alongside the rest of your security workflow.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">M</div>
+                        <h3>Maintenance</h3>
+                        <p>
+                            Clean temporary files, optimize storage, repair common Windows
+                            problems, and access maintenance workflows from one organized page.
+                        </p>
+                        <ul>
+                            <li>Cleanup</li>
+                            <li>Repair</li>
+                            <li>Optimization</li>
+                            <li>Guided maintenance actions</li>
+                        </ul>
+                        <span class="feature-badge">Free tools available</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">↺</div>
+                        <h3>Recovery &amp; Restore</h3>
+                        <p>
+                            ProtectKit emphasizes safer system changes by surfacing recovery
+                            options and restore-point workflows before or after important fixes.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section feature-section" id="logging">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Logs, Evidence &amp; Reporting</div>
+                    <h2>Keep a record of important ProtectKit activity</h2>
+                    <p>
+                        Security information is more useful when you can review what happened
+                        later, compare events, and preserve useful evidence.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">L</div>
+                        <h3>Centralized Security Logging</h3>
+                        <p>
+                            ProtectKit records important application and security events in
+                            persistent local logs so users can review activity over time.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">E</div>
+                        <h3>Evidence-Oriented Investigation</h3>
+                        <p>
+                            Findings can be supported by available evidence such as file paths,
+                            publishers, signatures, hashes, processes, services, network
+                            destinations, and Windows security status.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">RPT</div>
+                        <h3>Reports &amp; Export</h3>
+                        <p>
+                            Export supported information for later review, troubleshooting,
+                            documentation, or sharing with someone helping investigate a problem.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Start with ProtectKit Free</h2>
+                    <p>
+                        Check your Windows security, investigate what is running on your PC,
+                        strengthen important protections, and explore ProtectKit's maintenance
+                        tools before deciding whether Premium is right for you.
+                    </p>
+
+                    <div class="hero-actions" style="justify-content:center; margin-top:0;">
+                        <a class="button button-secondary"
+                           href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Download ProtectKit
+                        </a>
+
+                        <a class="button button-secondary" href="premium.html">
+                            Compare Editions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark">P</span>
+                    <span>ProtectKit</span>
+                </div>
+
+                <div class="footer-copy">
+                    © 2026 ProtectKit. All rights reserved.
+                    <br>
+                    <a href="https://getprotectkit.com/" style="font-weight:700;">
+                        getprotectkit.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="help.html">Help</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="support.html">Support</a>
+                <a href="https://apps.microsoft.com/store/detail/9PGK15ZT85RT"
+                   target="_blank"
+                   rel="noopener noreferrer">Microsoft Store</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
