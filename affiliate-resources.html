@@ -398,6 +398,66 @@
             background: var(--surface-soft);
         }
 
+        .embed-instructions {
+            margin: 28px 0 24px;
+            padding: 24px;
+            border: 1px solid #bddfff;
+            border-radius: 16px;
+            background: var(--surface-soft);
+        }
+
+        .embed-instructions h3 {
+            margin-bottom: 8px;
+        }
+
+        .embed-instructions p {
+            margin: 8px 0;
+            color: var(--text-soft);
+        }
+
+        .embed-code {
+            margin-top: 16px;
+            padding: 16px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #071b31;
+            color: #eaf5ff;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.84rem;
+            line-height: 1.5;
+            white-space: pre;
+        }
+
+        .embed-label {
+            display: block;
+            margin-top: 18px;
+            font-weight: 850;
+        }
+
+        .embed-note {
+            margin-top: 12px;
+            color: var(--text-soft);
+            font-size: 0.92rem;
+        }
+
+        .copy-embed-button {
+            min-height: 40px;
+            margin-top: 10px;
+            padding: 0 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--primary-dark);
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .copy-embed-button:hover {
+            border-color: #9cccf6;
+            background: var(--surface-soft);
+        }
+
         .facts-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -579,8 +639,8 @@
                     </h1>
 
                     <p class="hero-description">
-                        Use ready-made copy, promotional ideas, product facts, banner concepts,
-                        disclosures, and affiliate guidance to start promoting ProtectKit quickly.
+                        Use ready-made copy, promotional ideas, product facts, official banners,
+                        website embed code, disclosures, and affiliate guidance to start promoting ProtectKit quickly.
                         Replace example links with your own approved affiliate tracking link before publishing.
                     </p>
 
@@ -672,8 +732,20 @@
                     <div class="section-label">Affiliate Banners</div>
                     <h2>Ready-to-use ProtectKit promotional graphics</h2>
                     <p>
-                        Preview the official banners below, then download the full-resolution image for your website,
-                        social post, newsletter, article, or other approved promotion.
+                        Download a banner for your own promotion, or use the website embed code to display
+                        a ProtectKit banner directly from GetProtectKit.com.
+                    </p>
+                </div>
+
+                <div class="embed-instructions">
+                    <h3>How to put a ProtectKit banner on your website</h3>
+                    <p><strong>1.</strong> Copy the embed code underneath the banner you want to use.</p>
+                    <p><strong>2.</strong> Replace <strong>YOUR-AFFILIATE-LINK</strong> with your complete approved affiliate tracking link.</p>
+                    <p><strong>3.</strong> Paste the finished code into the HTML of your website, blog, or landing page.</p>
+                    <p><strong>That is the only part of the code you need to change.</strong> The banner image stays hosted on GetProtectKit.com, while clicks go through your affiliate tracking link.</p>
+                    <p class="embed-note">
+                        Example: if your affiliate dashboard gives you a full tracking URL, replace the words
+                        YOUR-AFFILIATE-LINK with that entire URL. Do not change the ProtectKit image URL.
                     </p>
                 </div>
 
@@ -693,12 +765,19 @@
                             Suggested use: Facebook, X, Reddit, blogs, websites, and general social promotion.
                         </div>
                         <div class="banner-actions">
-                            <a href="protectkit-free-pc-security-maintenance.png"
-                               target="_blank"
-                               rel="noopener">View Full Size</a>
-                            <a href="protectkit-free-pc-security-maintenance.png"
-                               download="protectkit-free-pc-security-maintenance.png">Download PNG</a>
+                            <a href="protectkit-free-pc-security-maintenance.png" target="_blank" rel="noopener">View Full Size</a>
+                            <a href="protectkit-free-pc-security-maintenance.png" download="protectkit-free-pc-security-maintenance.png">Download PNG</a>
                         </div>
+                        <span class="embed-label">Website Embed Code</span>
+                        <pre class="embed-code" id="embed-banner-1">&lt;a href="YOUR-AFFILIATE-LINK"
+   target="_blank"
+   rel="sponsored noopener"&gt;
+  &lt;img src="https://getprotectkit.com/protectkit-free-pc-security-maintenance.png"
+       alt="ProtectKit Free PC Security and Maintenance for Windows 11"
+       style="max-width:100%;height:auto;border:0;"
+       loading="lazy"&gt;
+&lt;/a&gt;</pre>
+                        <button class="copy-embed-button" onclick="copyText('embed-banner-1', this)">Copy Embed Code</button>
                     </article>
 
                     <article class="banner-card">
@@ -716,12 +795,19 @@
                             Suggested use: security, privacy, Windows, investigation, and technology audiences.
                         </div>
                         <div class="banner-actions">
-                            <a href="protectkit-see-what-is-happening-on-your-pc.png"
-                               target="_blank"
-                               rel="noopener">View Full Size</a>
-                            <a href="protectkit-see-what-is-happening-on-your-pc.png"
-                               download="protectkit-see-what-is-happening-on-your-pc.png">Download PNG</a>
+                            <a href="protectkit-see-what-is-happening-on-your-pc.png" target="_blank" rel="noopener">View Full Size</a>
+                            <a href="protectkit-see-what-is-happening-on-your-pc.png" download="protectkit-see-what-is-happening-on-your-pc.png">Download PNG</a>
                         </div>
+                        <span class="embed-label">Website Embed Code</span>
+                        <pre class="embed-code" id="embed-banner-2">&lt;a href="YOUR-AFFILIATE-LINK"
+   target="_blank"
+   rel="sponsored noopener"&gt;
+  &lt;img src="https://getprotectkit.com/protectkit-see-what-is-happening-on-your-pc.png"
+       alt="ProtectKit, See What Is Happening on Your PC"
+       style="max-width:100%;height:auto;border:0;"
+       loading="lazy"&gt;
+&lt;/a&gt;</pre>
+                        <button class="copy-embed-button" onclick="copyText('embed-banner-2', this)">Copy Embed Code</button>
                     </article>
 
                     <article class="banner-card">
@@ -739,18 +825,27 @@
                             Suggested use: download-focused posts, newsletters, review pages, and general Windows audiences.
                         </div>
                         <div class="banner-actions">
-                            <a href="protectkit-free-windows-security.png"
-                               target="_blank"
-                               rel="noopener">View Full Size</a>
-                            <a href="protectkit-free-windows-security.png"
-                               download="protectkit-free-windows-security.png">Download PNG</a>
+                            <a href="protectkit-free-windows-security.png" target="_blank" rel="noopener">View Full Size</a>
+                            <a href="protectkit-free-windows-security.png" download="protectkit-free-windows-security.png">Download PNG</a>
                         </div>
+                        <span class="embed-label">Website Embed Code</span>
+                        <pre class="embed-code" id="embed-banner-3">&lt;a href="YOUR-AFFILIATE-LINK"
+   target="_blank"
+   rel="sponsored noopener"&gt;
+  &lt;img src="https://getprotectkit.com/protectkit-free-windows-security.png"
+       alt="ProtectKit Free Windows Security"
+       style="max-width:100%;height:auto;border:0;"
+       loading="lazy"&gt;
+&lt;/a&gt;</pre>
+                        <button class="copy-embed-button" onclick="copyText('embed-banner-3', this)">Copy Embed Code</button>
                     </article>
                 </div>
 
                 <div class="notice" style="margin-top:24px;">
-                    These graphics are provided for approved ProtectKit affiliate promotion. Affiliates should not modify
-                    ProtectKit branding in ways that imply unsupported claims, guarantees, certifications, or endorsements.
+                    <strong>Important:</strong> Replace only <strong>YOUR-AFFILIATE-LINK</strong> with your complete approved affiliate tracking link.
+                    Keep the ProtectKit image address unchanged so the official banner continues to load from GetProtectKit.com.
+                    These graphics are provided for approved ProtectKit affiliate promotion and should not be modified in ways
+                    that imply unsupported claims, guarantees, certifications, or endorsements.
                 </div>
             </div>
         </section>
