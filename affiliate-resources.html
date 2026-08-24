@@ -351,31 +351,51 @@
         }
 
         .banner-preview {
-            min-height: 170px;
-            padding: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow: hidden;
             border-radius: 14px;
-            background: linear-gradient(135deg, #082f53, #1687e8);
-            color: white;
+            background: #071b31;
+            border: 1px solid var(--border);
         }
 
-        .banner-preview h3 {
-            margin: 0 0 8px;
-            font-size: 1.55rem;
+        .banner-preview a {
+            display: block;
         }
 
-        .banner-preview p {
-            margin: 0;
-            color: rgba(255,255,255,.82);
+        .banner-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .banner-meta {
             margin-top: 14px;
             color: var(--text-soft);
             font-size: 0.92rem;
+        }
+
+        .banner-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .banner-actions a {
+            min-height: 40px;
+            padding: 0 14px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .banner-actions a:hover {
+            border-color: #9cccf6;
+            background: var(--surface-soft);
         }
 
         .facts-grid {
@@ -649,67 +669,88 @@
         <section class="section" id="banners">
             <div class="container">
                 <div class="section-heading">
-                    <div class="section-label">Banner Concepts</div>
-                    <h2>Ready-to-build promotional banner ideas</h2>
+                    <div class="section-label">Affiliate Banners</div>
+                    <h2>Ready-to-use ProtectKit promotional graphics</h2>
                     <p>
-                        Use these as approved-style concepts for social posts, websites, newsletters, and landing pages.
+                        Preview the official banners below, then download the full-resolution image for your website,
+                        social post, newsletter, article, or other approved promotion.
                     </p>
                 </div>
 
                 <div class="banner-grid">
                     <article class="banner-card">
                         <div class="banner-preview">
-                            <div>
-                                <h3>FREE PC Security &amp; Maintenance</h3>
-                                <p>ProtectKit for Windows 11</p>
-                            </div>
+                            <a href="protectkit-free-pc-security-maintenance.png"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="View full-size Free PC Security and Maintenance banner">
+                                <img src="protectkit-free-pc-security-maintenance.png"
+                                     alt="ProtectKit Free PC Security and Maintenance promotional banner"
+                                     loading="lazy">
+                            </a>
                         </div>
                         <div class="banner-meta">
-                            Suggested use: Facebook, X, Reddit, blogs, general social promotion.
+                            Suggested use: Facebook, X, Reddit, blogs, websites, and general social promotion.
+                        </div>
+                        <div class="banner-actions">
+                            <a href="protectkit-free-pc-security-maintenance.png"
+                               target="_blank"
+                               rel="noopener">View Full Size</a>
+                            <a href="protectkit-free-pc-security-maintenance.png"
+                               download="protectkit-free-pc-security-maintenance.png">Download PNG</a>
                         </div>
                     </article>
 
                     <article class="banner-card">
                         <div class="banner-preview">
-                            <div>
-                                <h3>See What Is Happening on Your PC</h3>
-                                <p>Windows security that explains itself.</p>
-                            </div>
+                            <a href="protectkit-see-what-is-happening-on-your-pc.png"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="View full-size See What Is Happening on Your PC banner">
+                                <img src="protectkit-see-what-is-happening-on-your-pc.png"
+                                     alt="ProtectKit See What Is Happening on Your PC promotional banner"
+                                     loading="lazy">
+                            </a>
                         </div>
                         <div class="banner-meta">
-                            Suggested use: security, privacy, Windows, and technology audiences.
+                            Suggested use: security, privacy, Windows, investigation, and technology audiences.
+                        </div>
+                        <div class="banner-actions">
+                            <a href="protectkit-see-what-is-happening-on-your-pc.png"
+                               target="_blank"
+                               rel="noopener">View Full Size</a>
+                            <a href="protectkit-see-what-is-happening-on-your-pc.png"
+                               download="protectkit-see-what-is-happening-on-your-pc.png">Download PNG</a>
                         </div>
                     </article>
 
                     <article class="banner-card">
                         <div class="banner-preview">
-                            <div>
-                                <h3>ProtectKit Free</h3>
-                                <p>Security, investigation, maintenance, and more.</p>
-                            </div>
+                            <a href="protectkit-free-windows-security.png"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="View full-size ProtectKit Free Windows Security banner">
+                                <img src="protectkit-free-windows-security.png"
+                                     alt="ProtectKit Free Windows Security promotional banner"
+                                     loading="lazy">
+                            </a>
                         </div>
                         <div class="banner-meta">
-                            Suggested use: download-focused posts and newsletters.
+                            Suggested use: download-focused posts, newsletters, review pages, and general Windows audiences.
                         </div>
-                    </article>
-
-                    <article class="banner-card">
-                        <div class="banner-preview">
-                            <div>
-                                <h3>Windows 11 Security Made Easier</h3>
-                                <p>Understand findings. Review evidence. Know what to do next.</p>
-                            </div>
-                        </div>
-                        <div class="banner-meta">
-                            Suggested use: educational content and review articles.
+                        <div class="banner-actions">
+                            <a href="protectkit-free-windows-security.png"
+                               target="_blank"
+                               rel="noopener">View Full Size</a>
+                            <a href="protectkit-free-windows-security.png"
+                               download="protectkit-free-windows-security.png">Download PNG</a>
                         </div>
                     </article>
                 </div>
 
                 <div class="notice" style="margin-top:24px;">
-                    Official downloadable image files can be added to this page later. Until then,
-                    affiliates should avoid modifying ProtectKit branding in ways that imply unsupported
-                    claims, guarantees, certifications, or endorsements.
+                    These graphics are provided for approved ProtectKit affiliate promotion. Affiliates should not modify
+                    ProtectKit branding in ways that imply unsupported claims, guarantees, certifications, or endorsements.
                 </div>
             </div>
         </section>
