@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explore ProtectKit features for Windows 11 security, monitoring, investigation, hardening, privacy, network visibility, threat detection, maintenance, and recovery.">
+    <meta name="description" content="Explore ProtectKit features for Windows 11 security, extensive WiFi protection, connected-device discovery, monitoring, investigation, hardening, privacy, threat detection, maintenance, and recovery.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1687e8">
 
@@ -15,14 +15,14 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ProtectKit">
     <meta property="og:title" content="ProtectKit Features | Windows Security, Investigation & Maintenance">
-    <meta property="og:description" content="See how ProtectKit helps you understand Windows security, investigate suspicious activity, strengthen protections, and maintain your PC.">
+    <meta property="og:description" content="See how ProtectKit helps you understand Windows security, monitor WiFi, discover connected devices, investigate suspicious activity, strengthen protections, and maintain your PC.">
     <meta property="og:url" content="https://getprotectkit.com/features.html">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ProtectKit Features">
-    <meta name="twitter:description" content="Windows security, investigation, monitoring, privacy, maintenance, and recovery in one clear application.">
+    <meta name="twitter:description" content="Windows and WiFi security, investigation, monitoring, privacy, maintenance, and recovery in one clear application.">
 
-    <title>ProtectKit Features | Windows Security, Investigation & Maintenance</title>
+    <title>ProtectKit Features | Windows & WiFi Security, Investigation & Maintenance</title>
 
     <style>
         :root {
@@ -807,6 +807,28 @@
             border-top: 1px solid var(--border);
         }
 
+        .wifi-accuracy-box {
+            max-width: 920px;
+            margin: 34px auto 0;
+            padding: 34px;
+            border: 1px solid #bddfff;
+            border-radius: 22px;
+            background: var(--surface-soft);
+            text-align: center;
+            box-shadow: 0 12px 32px rgba(19, 61, 96, 0.06);
+        }
+
+        .wifi-accuracy-box h2 {
+            margin: 10px 0 14px;
+            font-size: clamp(1.7rem, 3vw, 2.45rem);
+        }
+
+        .wifi-accuracy-box p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 1.04rem;
+        }
+
         .wide-card {
             grid-column: span 2;
         }
@@ -859,12 +881,14 @@
                 </h1>
 
                 <p class="hero-description">
-                    ProtectKit brings Windows security, monitoring, investigation,
-                    hardening, privacy, maintenance, and recovery tools together in
-                    one application. Instead of only showing raw technical data,
-                    ProtectKit is designed to explain findings, show available
-                    evidence, and help you decide what to do next. ProtectKit Premium starts at $3.99 per month,
-                    with yearly billing also available.
+                    ProtectKit brings Windows security, extensive WiFi protection,
+                    connected-device discovery, monitoring, investigation, hardening,
+                    privacy, maintenance, and recovery tools together in one application.
+                    Instead of only showing raw technical data, ProtectKit is designed
+                    to explain findings, show available evidence, and help you decide
+                    what to do next. The complete WiFi Security system is included in
+                    ProtectKit Free. ProtectKit Premium starts at $3.99 per month, with
+                    yearly billing also available.
                 </p>
 
                 <div class="hero-actions" style="justify-content:center;">
@@ -895,6 +919,7 @@
             <div class="container category-links">
                 <a href="#core-security">Core Security</a>
                 <a href="#investigation">Investigation</a>
+                <a href="#wifi-security">WiFi Security</a>
                 <a href="#advanced-protection">Advanced Protection</a>
                 <a href="#device-security">Device Security</a>
                 <a href="#privacy-maintenance">Privacy &amp; Maintenance</a>
@@ -1112,6 +1137,182 @@
             </div>
         </section>
 
+        <section class="section feature-section" id="wifi-security">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-label">Complete WiFi Security • Included Free</div>
+                    <h2>Far more than a list of devices on your network</h2>
+                    <p>
+                        ProtectKit WiFi Security continuously observes the active wireless
+                        connection, access point, gateway, DNS path, nearby network identity,
+                        and visible devices. It compares current observations with trusted
+                        baselines, correlates independent evidence, explains meaningful
+                        changes, and provides guided response tools. The complete system is
+                        currently included in ProtectKit Free.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">CG</div>
+                        <h3>WiFi Connection Guard</h3>
+                        <p>
+                            Continuously verify the identity and security path of the
+                            wireless network currently carrying your traffic.
+                        </p>
+                        <ul>
+                            <li>SSID and connected BSSID awareness</li>
+                            <li>Authentication and cipher review</li>
+                            <li>Trusted-network baseline comparison</li>
+                            <li>Connection-change and resume checks</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">ET</div>
+                        <h3>Evil Twin Protection</h3>
+                        <p>
+                            Look for a same-name access point whose security identity and
+                            surrounding network path differ meaningfully from the trusted
+                            network.
+                        </p>
+                        <ul>
+                            <li>Same-SSID security downgrade detection</li>
+                            <li>Access-point identity comparison</li>
+                            <li>Gateway and DNS correlation</li>
+                            <li>Confirmation checks to reduce false alarms</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">DNS</div>
+                        <h3>Gateway &amp; DNS Integrity</h3>
+                        <p>
+                            Track the infrastructure that directs local and Internet
+                            traffic and identify changes that deserve verification.
+                        </p>
+                        <ul>
+                            <li>Gateway IP and MAC observation</li>
+                            <li>DNS resolver comparison</li>
+                            <li>ARP and network-path consistency signals</li>
+                            <li>Trusted DNS acceptance and recovery controls</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">LAN</div>
+                        <h3>Network Device Discovery</h3>
+                        <p>
+                            Build a live view of devices visible on the local network using
+                            multiple local discovery and service-fingerprinting signals.
+                        </p>
+                        <ul>
+                            <li>IP and MAC address visibility</li>
+                            <li>Manufacturer and likely-device identification</li>
+                            <li>SSDP, UPnP, and mDNS service hints</li>
+                            <li>Conservative local TCP service fingerprinting</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">DI</div>
+                        <h3>Deep Device Investigation</h3>
+                        <p>
+                            Select an unfamiliar device and gather additional evidence to
+                            better understand its likely identity and exposed services.
+                        </p>
+                        <ul>
+                            <li>Expanded service inspection</li>
+                            <li>Device fingerprint and confidence assessment</li>
+                            <li>Behavioral and historical comparison</li>
+                            <li>Plain-English risk and response guidance</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">TR</div>
+                        <h3>Trust &amp; Device Classification</h3>
+                        <p>
+                            Record what belongs on the network so later observations have
+                            meaningful context instead of treating every device as a threat.
+                        </p>
+                        <ul>
+                            <li>Trusted, guest, unknown, and blocked states</li>
+                            <li>First-seen and last-seen history</li>
+                            <li>New-device and identity-change awareness</li>
+                            <li>Support for normal randomized MAC behavior</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">!</div>
+                        <h3>Evidence-Based Alerts</h3>
+                        <p>
+                            Escalate meaningful WiFi findings only when confidence is high
+                            enough or multiple independent signals support the conclusion.
+                        </p>
+                        <ul>
+                            <li>Evidence and confidence explanations</li>
+                            <li>Warning and critical severity levels</li>
+                            <li>Duplicate-alert suppression</li>
+                            <li>Recommended response for each finding</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">24</div>
+                        <h3>Continuous Monitoring &amp; Containment</h3>
+                        <p>
+                            Continue checking in the background and provide immediate
+                            isolation controls when a confirmed critical threat requires it.
+                        </p>
+                        <ul>
+                            <li>Scheduled and network-transition checks</li>
+                            <li>Real-time desktop alerts</li>
+                            <li>Optional automatic WiFi disconnection</li>
+                            <li>Manual Check Now and Disconnect WiFi controls</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">LOG</div>
+                        <h3>Timeline, Forensics &amp; Evidence Export</h3>
+                        <p>
+                            Preserve important network observations so changes can be
+                            reviewed later instead of disappearing after the scan ends.
+                        </p>
+                        <ul>
+                            <li>Network timeline and historical observations</li>
+                            <li>Forensic event history with deduplication</li>
+                            <li>Device evidence and incident exports</li>
+                            <li>Review and acknowledgement workflow</li>
+                        </ul>
+                        <span class="feature-badge">Included in Free</span>
+                    </article>
+                </div>
+
+                <div class="wifi-accuracy-box">
+                    <div class="section-label">Designed for accuracy</div>
+                    <h2>Evidence before assumptions</h2>
+                    <p>
+                        An unfamiliar device, a randomized MAC address, or a changed BSSID
+                        is not automatically malicious. ProtectKit is designed to compare
+                        context, require stronger evidence for serious conclusions, confirm
+                        persistent findings, and explain uncertainty before recommending a
+                        disruptive response.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section class="section section-alt feature-section" id="advanced-protection">
             <div class="container">
                 <div class="section-heading">
@@ -1324,9 +1525,10 @@
                 <div class="cta-box">
                     <h2>Start with ProtectKit Free</h2>
                     <p>
-                        Check your Windows security, investigate what is running on your PC,
-                        strengthen important protections, and explore ProtectKit's maintenance
-                        tools before deciding whether Premium is right for you.
+                        Check your Windows security, use the complete WiFi Security system,
+                        investigate what is running on your PC, strengthen important
+                        protections, and explore ProtectKit's maintenance tools before
+                        deciding whether Premium is right for you.
                     </p>
 
                     <div class="hero-actions" style="justify-content:center; margin-top:0;">
